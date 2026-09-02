@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="6-D1twc7oUuMauyQ5IjUmA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="foxit.com/ja-jp/pdf-to-excel" DesignTimeRectangle="941, 1113, 176, 52" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='保存(&amp;amp;S)' /&gt;" Guid="a82637cf-8133-41b7-b79b-8bed93781e38" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='名前を付けて保存' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a223ea6dfd4aeadbe73b8675a03354ba.jpg" xmlns="">0LFPjcl4LjEO4YHceE5aSgA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

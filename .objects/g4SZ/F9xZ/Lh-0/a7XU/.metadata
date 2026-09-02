@@ -1,0 +1,13 @@
+﻿{
+  "Name": "コマンド モジュール(1)",
+  "Type": "Element",
+  "Id": "a7XUWcwxeE6qMtDevpABAQ",
+  "Reference": "c_veQxnNcEqCAHsgKse5tg/a7XUWcwxeE6qMtDevpABAQ",
+  "ParentRef": "c_veQxnNcEqCAHsgKse5tg/Lh-0XwKyQk-FGKrZwPFgJg",
+  "Created": "2026-08-05T02:15:30.0827856Z",
+  "Updated": "2026-08-05T02:15:30.0827856Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

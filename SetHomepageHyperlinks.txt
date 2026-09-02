@@ -1,0 +1,30 @@
+Option Explicit
+
+Public Sub SetHomepageHyperlinks()
+    Const FIRST_DATA_ROW As Long = 2
+    Const URL_COLUMN As Long = 6
+    Const DISPLAY_TEXT As String = "ÉzÅ[ÉÄÉyÅ[ÉW"
+
+    Dim ws As Worksheet
+    Dim lastRow As Long
+    Dim rowIndex As Long
+    Dim url As String
+    Dim targetCell As Range
+   
+
+    Set ws = ActiveWorkbook.Worksheets("ãsë“ñhé~")
+    lastRow = ws.Cells(ws.Rows.Count, URL_COLUMN).End(xlUp).Row
+
+    For rowIndex = FIRST_DATA_ROW To lastRow
+        Set targetCell = ws.Cells(rowIndex, URL_COLUMN)
+        url = Trim$(CStr(targetCell.Value2))
+
+        If LCase$(url) <> "ng" _
+            And LCase$(url) <> "retry" _
+            And (LCase$(Left$(url, 8)) = "https://" Or LCase$(Left$(url, 7)) = "http://") Then
+
+            targetCell.Hyperlinks.Delete
+            ws.Hyperlinks.Add Anchor:=targetCell, Address:=url, TextToDisplay:=DISPLAY_TEXT
+        End If
+    Next rowIndex
+End Sub

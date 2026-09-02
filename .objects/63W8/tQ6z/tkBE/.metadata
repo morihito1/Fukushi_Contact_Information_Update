@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome 通報・届出等窓口一覧障害者虐待防止と権利擁護東京都福祉局",
+  "Type": "Screen",
+  "Id": "tkBEvfdgvEaFItzVONcZrg",
+  "Reference": "c_veQxnNcEqCAHsgKse5tg/tkBEvfdgvEaFItzVONcZrg",
+  "ParentRef": "c_veQxnNcEqCAHsgKse5tg/tQ6z8slUnU6rZ_p5Xyha_Q",
+  "Created": "2026-07-28T04:46:10.7063366Z",
+  "Updated": "2026-07-28T04:46:10.7063366Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="n78ipcZZ7k28F1x1zEtu0A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.google.com/search?q=%22%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E9%9A%9C%E5%AE%B3%E8%80%85%E8%99%90%E5%BE%85%E9%98%B2%E6%AD%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%28%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E9%9A%9C%E5%AE%B3%E8%80%85%E3%82%88%E3%82%8D%E3%81%9A%E7%9B%B8%E8%AB%87Light%29%22+%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88&amp;sca_esv=98f9e8ca0b9df2a8&amp;sxsrf=APpeQnvy5wCkxLkvQbEhF4WFLgDKO7F3fg%3A1786076895545&amp;source=hp&amp;ei=3151apeOH_6B5OUP7u3dgAQ&amp;iflsig=ABILxe8AAAAAanVs72rdV-b6gzcsXAign8lfuXCrMgZv&amp;ved=0ahUKEwjX-Zf31o2WAxX-ALkGHe52F0AQ4dUDCCs&amp;uact=5&amp;oq=%22%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E9%9A%9C%E5%AE%B3%E8%80%85%E8%99%90%E5%BE%85%E9%98%B2%E6%AD%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%28%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E9%9A%9C%E5%AE%B3%E8%80%85%E3%82%88%E3%82%8D%E3%81%9A%E7%9B%B8%E8%AB%87Light%29%22+%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88&amp;gs_lp=Egdnd3Mtd2l6Imoi5Y2D5Luj55Sw5Yy66Zqc5a6z6ICF6JmQ5b6F6Ziy5q2i44K744Oz44K_44O8KOWNg-S7o-eUsOWMuumanOWus-iAheOCiOOCjeOBmuebuOirh0xpZ2h0KSIg5YWs5byP44K144Kk44OIMgcQIxjqAhgnMhAQIxiiBxieBhjwBRjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnSIv6CFDzEFjzEHABeACQAQCYAQCgAQCqAQC4AQPIAQD4AQL4AQGYAgGgAiCoAgqYAyDxBelcrb-mKEqSkgcBMaAHALIHALgHAMIHAzQtMcgHGYAIAQ&amp;sclient=gws-wiz" DesignTimeRectangle="254, 709, 1656, 4747" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='rso' tag='DIV' /&gt;" Guid="a12c858b-44e2-4122-9220-2db6d96cb852" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='main' title='&amp;quot;千代田区障害者虐待防止センター(千代田区障害者よろず相談Light)&amp;quot; 公式サイト - Google 検索' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="8a14352ce0332266d4215f90be415a4f.jpg" xmlns="">0rnPkpoCIMU-r4PZmovdTXg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">ExtractDataGeneric</x:String>
+    <p:InArgument x:TypeArguments="x:String" x:Key="ExtractDataSettings" xml:space="preserve">&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;
+	&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='新しい列 0 Url'&gt;
+		&lt;IsValidName&gt;true&lt;/IsValidName&gt;
+		&lt;ValidationErrorMessage /&gt;
+		&lt;IsExtra&gt;false&lt;/IsExtra&gt;
+		&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;
+		&lt;Format xsi:type='TextColumnFormat' /&gt;
+	&lt;/Column&gt;
+&lt;/Table&gt;</p:InArgument>
+    <x:Null x:Key="NextLinkTarget" />
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

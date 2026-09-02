@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome 千代田区障害者虐待防止センター(千代田区障害者よろず相談Light) 公式サ",
+  "Type": "Screen",
+  "Id": "wip8VsLLB0izP7-rSWvMYA",
+  "Reference": "c_veQxnNcEqCAHsgKse5tg/wip8VsLLB0izP7-rSWvMYA",
+  "ParentRef": "c_veQxnNcEqCAHsgKse5tg/rnT11XGdA0eqNAT2X_caCg",
+  "Created": "2026-08-07T08:19:58.1729652Z",
+  "Updated": "2026-08-07T08:19:58.1729652Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

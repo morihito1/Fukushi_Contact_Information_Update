@@ -1,0 +1,14 @@
+﻿{
+  "Name": "各区市町村の苦情対応機関一覧（令和8年4月現在…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "WXz0TNp_yU6C-Vs7d54msg",
+  "Reference": "c_veQxnNcEqCAHsgKse5tg/WXz0TNp_yU6C-Vs7d54msg",
+  "ParentRef": "c_veQxnNcEqCAHsgKse5tg/2vYVCC1Q30GITmAFJgRDdQ",
+  "Created": "2026-08-04T02:25:43.9080828Z",
+  "Updated": "2026-08-04T02:25:43.9080828Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

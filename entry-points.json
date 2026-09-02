@@ -1,0 +1,21 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "TokyoMain1.xaml",
+      "uniqueId": "dac96e3b-17d0-4c77-afa2-e382e4f2c6c8",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "BasePath": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "BasePath"
+        ]
+      }
+    }
+  ]
+}

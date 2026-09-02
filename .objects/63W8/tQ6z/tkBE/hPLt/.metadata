@@ -1,0 +1,13 @@
+﻿{
+  "Name": "ウィンドウ操作 - ウィンドウをフォアグラウンドに移動",
+  "Type": "Element",
+  "Id": "hPLtH-wiVU6I8R4Tgghc2Q",
+  "Reference": "c_veQxnNcEqCAHsgKse5tg/hPLtH-wiVU6I8R4Tgghc2Q",
+  "ParentRef": "c_veQxnNcEqCAHsgKse5tg/tkBEvfdgvEaFItzVONcZrg",
+  "Created": "2026-07-29T02:55:43.8484449Z",
+  "Updated": "2026-07-29T02:55:43.8484449Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

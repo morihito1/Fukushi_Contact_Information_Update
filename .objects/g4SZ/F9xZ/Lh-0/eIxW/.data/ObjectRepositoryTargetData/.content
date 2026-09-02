@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NuVymuHwUkOGFnsJg1T7bw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="ilovepdf.com/ja/download/rtcss0x202bxv79fgbyywvw0cfhpA68flh9289dp9xh3x1mvlz15Ayqj89cyptbxr87Aqp31khc60ftqgA7wjyf7mxtbzp6rdyvnv110m18545q15mrl45dnj60v0kw7tchzbr7qk0zrql5087sg08yAz5wkwplrdxAd2zt9qk51zcs82tmq/20o" DesignTimeRectangle="897, 643, 72, 72" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='download' tag='A' /&gt;" Guid="04b348bf-7a65-4b3a-a457-1bb75a6e3634" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ファイルのダウンロード | iLovePDF' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="TopRight" X="136" Y="15" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="26a9a0392c0b7bdd2d6eaed81512380a.jpg" xmlns="">0LDClztja80as2PpX4aLdQw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

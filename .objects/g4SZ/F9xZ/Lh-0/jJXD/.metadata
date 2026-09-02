@@ -1,0 +1,14 @@
+﻿{
+  "Name": "変換を開始",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "jJXD_ZI700mWFwoeEL6J2A",
+  "Reference": "c_veQxnNcEqCAHsgKse5tg/jJXD_ZI700mWFwoeEL6J2A",
+  "ParentRef": "c_veQxnNcEqCAHsgKse5tg/Lh-0XwKyQk-FGKrZwPFgJg",
+  "Created": "2026-08-04T10:26:28.6971029Z",
+  "Updated": "2026-08-04T10:26:28.6971029Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "DIV rso",
+  "Type": "Element",
+  "Id": "EF3toV9OqE-YxsoxFb284Q",
+  "Reference": "c_veQxnNcEqCAHsgKse5tg/EF3toV9OqE-YxsoxFb284Q",
+  "ParentRef": "c_veQxnNcEqCAHsgKse5tg/od42Itnrr0CSNMazA-_uPw",
+  "Created": "2026-08-07T05:12:43.6447176Z",
+  "Updated": "2026-08-07T05:12:43.6447176Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

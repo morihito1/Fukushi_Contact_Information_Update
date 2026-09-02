@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="nwLUO0WKNE-mcHsbjodkBg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="ilovepdf.com/ja/pdf_to_excel" DesignTimeRectangle="941, 1113, 176, 52" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='開く(&amp;amp;O)' /&gt;" Guid="7fce37e5-1753-4bb6-b88c-9a3a95d9b231" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='開く' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1124418a09f51b6a019e6149c8feb256.jpg" xmlns="">0UF4kkDpiiUGhQlKlYx7rUw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

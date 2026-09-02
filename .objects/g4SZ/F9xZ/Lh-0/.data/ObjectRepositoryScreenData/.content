@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="pxSwhNdiM0Kuqhe9OuWG1w" Reference="c_veQxnNcEqCAHsgKse5tg/Lh-0XwKyQk-FGKrZwPFgJg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-13, -13, 2762, 1850" BrowserType="Chrome" ContentHash="ipF4niHf9EuprJeBZx1iHw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACsElEQVRYR+2XO2gUURiF4xOtND46CxHEkP2T3WMSMKjYiI0WggEFG1FhxUcliYZgWsFCIT7iI2hjp42VorEVQcRHY6Ux2RNfGw0mEpGNXvmXO8vNndns7rhrlQOnWJg55+POzL3/1tXNyRMh6qWEbCHkNCF9hJwn5AQhIGSxXlN12eL5hOwk5B4h44QYx38I+UTIbUI22evdexcQ0sFkYydTieVMJfyK4rIBSwg5RciYVxzld4TsI2Ses2I9bGke/7Bt8zRTiT6mEsvKgrABGtRJyFREWTF/JmS3vb+bkJ+jbSkzMXDdjB1N5zJNDRfLgrABO2ygX1LKrwk5Q8iX/O/WpJl6PGhymRGTTR9SiEslIQhZZJ+rH16O9b3IFX4rwOBDo8oNDZls+rBCXJ71nSCkmZDhiPDK7QA4ENOZpoYrRSEIOUDIr1BYHHsAeYj3QyZ7JA/RHwlBSK9dynBgpY4AiIConwFBSBchv0NhcVwEQOVAXJ0BYT+lH6GwOJ4FQOVAXCtAELKGkBehsDjOAzzye2coNzJsxo6ldbNSiNXBPnAuFBbHLc3ma3eXmbh5I78hRfrWgPnW22NG21snmWzsCAA2EPIqFBjHqUbDZAmnEoYbm+4SsjIACN6Fj6HA2vglIcnCqeqcB3rAMOKGavo5Ie3uaepDbCfkacSN/+ppQnTZE6FyD0K9zg4h/kwQ17rVnyRkRWSxLwuhh9QuQp5EBJZrPajuENIWzA5ly1mNtYT0VzgrqLN2wKmvqNiXhdCJ53jh3C/tN3b1dMTzIyuXhdCwvYRkIgpdP/NnxqrIeSR7CBmNKFbrJ9Za9fJADsRBQr575W8J2Vqz8kC2YCEhZ505YpKQ/TUvD2SLVhHywAJcqNkflmKyEDpN3ydk/X8tV1kA3ax0nqhsk5mTo7867ThJ/6nUIQAAAABJRU5ErkJggg==" Reference="c_veQxnNcEqCAHsgKse5tg/Lh-0XwKyQk-FGKrZwPFgJg" Selector="&lt;html app='chrome.exe' title='PDFをEXCELに瞬時に変換' /&gt;" Url="https://www.ilovepdf.com/ja/pdf_to_excel" Version="V3">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="cf2c921279916c8cb726381afe102857.jpg" xmlns="">0JzgfGEAl30iRB7TgPNkqvw</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

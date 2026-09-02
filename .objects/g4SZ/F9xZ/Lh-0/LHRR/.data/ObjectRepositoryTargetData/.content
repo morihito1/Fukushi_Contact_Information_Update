@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="prYA0JWfdE2ilPr5X4ntdA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="ilovepdf.com/ja/pdf_to_excel" DesignTimeRectangle="1051, 771, 660, 160" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pickfiles' tag='A' /&gt;" Guid="9d9b2ebb-da28-4a66-af5e-f7e0a3465da1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PDFをEXCELに瞬時に変換' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0e36426ea6aa254ff01d7f93678e89b4.jpg" xmlns="">0PrDhDyhmt0OEn_ARhovsBA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

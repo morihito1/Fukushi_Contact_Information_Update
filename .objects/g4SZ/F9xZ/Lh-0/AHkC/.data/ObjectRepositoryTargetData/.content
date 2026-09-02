@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="BjU1ddxyv0adnwCiaFFw6w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="adobe.com/jp/acrobat/online/pdf-to-excel.html" DesignTimeRectangle="13, 149, 1338, 62" ElementType="Toolbar" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer ウィンドウ' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer ウィンドウ' role='pane' /&gt;&lt;ctrl name='コマンド モジュール' role='tool bar' /&gt;" Guid="6d847f84-24bc-4577-bdfe-7b72fcc21d01" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='開く' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="TopRight" X="-311" Y="-22" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="f9b46b3d88aaa7d27d69cf19ba491bff.jpg" xmlns="">0KSNAYdUfY0yTZzHMzViJAw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
