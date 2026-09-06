@@ -2,7 +2,7 @@
   "name": "福祉連絡先更新",
   "projectId": "83d93a35-7658-46a2-a098-5b1e008ec13e",
   "description": "ポートフォリオ",
-  "main": "TokyoMain1.xaml",
+  "main": "Main1.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[3.6.1]",
     "UiPath.GSuite.Activities": "[3.10.10]",
@@ -50,8 +50,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "TokyoMain1.xaml",
-      "uniqueId": "dac96e3b-17d0-4c77-afa2-e382e4f2c6c8",
+      "filePath": "Main1.xaml",
+      "uniqueId": "95f2c1dc-19a7-4a1f-af9c-ac19f1d8f6c3",
       "input": [],
       "output": []
     }

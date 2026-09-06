@@ -1,0 +1,32 @@
+Option Explicit
+
+Public Sub SetComplaintHyperlinks()
+    Const FIRST_DATA_ROW As Long = 2
+    Const URL_COLUMN As Long = 5
+
+    Dim ws As Worksheet
+    Dim lastRow As Long
+    Dim rowIndex As Long
+    Dim url As String
+    Dim displayText As String
+    Dim targetCell As Range
+
+    ' Keep the worksheet lookup independent of external VBA file encoding.
+    Set ws = ActiveWorkbook.Worksheets(2)
+    displayText = ChrW(&H30DB) & ChrW(&H30FC) & ChrW(&H30E0) & _
+                  ChrW(&H30DA) & ChrW(&H30FC) & ChrW(&H30B8)
+    lastRow = ws.Cells(ws.Rows.Count, URL_COLUMN).End(xlUp).Row
+
+    For rowIndex = FIRST_DATA_ROW To lastRow
+        Set targetCell = ws.Cells(rowIndex, URL_COLUMN)
+        url = Trim$(CStr(targetCell.Value2))
+
+        If LCase$(Left$(url, 8)) = "https://" Or _
+           LCase$(Left$(url, 7)) = "http://" Then
+
+            targetCell.Hyperlinks.Delete
+            ws.Hyperlinks.Add Anchor:=targetCell, Address:=url, _
+                TextToDisplay:=displayText
+        End If
+    Next rowIndex
+End Sub

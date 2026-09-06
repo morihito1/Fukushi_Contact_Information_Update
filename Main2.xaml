@@ -1,0 +1,870 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="sub" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:nsu="clr-namespace:NPOI.SS.UserModel;assembly=NPOI.Core" xmlns:nxu="clr-namespace:NPOI.XSSF.UserModel;assembly=NPOI.OOXML" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BasePath" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>sub_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Activities.System.FileOperations</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows.Media</x:String>
+      <x:String>System.Windows.Threading</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>NPOI.XSSF.UserModel</x:String>
+      <x:String>NPOI.Util</x:String>
+      <x:String>NPOI.SS.UserModel</x:String>
+      <x:String>NPOI</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>NPOI.OOXML</AssemblyReference>
+      <AssemblyReference>NPOI.OpenXml4Net</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Primitives</AssemblyReference>
+      <AssemblyReference>System.Windows.Presentation</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="sub" sap:VirtualizedContainerService.HintSize="698,12223.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="savepath" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="LastRowIndex" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="苦情問い合わせ" sap:VirtualizedContainerService.HintSize="698,12200.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="relativeUrl" />
+        <Variable x:TypeArguments="x:String" Name="pdfBytes" />
+        <Variable x:TypeArguments="x:String" Name="targetpath" />
+        <Variable x:TypeArguments="x:String" Name="保存パス" />
+        <Variable x:TypeArguments="x:String" Name="baseUrl" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="664,176" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[保存パス]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Path.Combine(BasePath, "Data", "苦情問い合わせ連絡先リスト_" &amp; Now.ToString("yyyyMMdd") &amp; ".pdf")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="664,176" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[savepath]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Path.Combine(BasePath, "Data")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="664,176" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[baseUrl]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["https://www.tcsw.tvac.or.jp/tekiseika/"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 運営適正化委員会事業｜東京都社会福祉協議会" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="664,8417" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a29a25d5-d096-43c3-9268-5a0e861f2c3e" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="662,8213" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="absoluteUrl" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NWindowOperation DisplayName="ウィンドウ操作 - ウィンドウを最大化" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="628,175" sap2010:WorkflowViewState.IdRef="NWindowOperation_6" Operation="Maximize" ScopeIdentifier="a29a25d5-d096-43c3-9268-5a0e861f2c3e" Version="V5" />
+              <uix:NWindowOperation DisplayName="ウィンドウ操作 - ウィンドウをフォアグラウンドに移動" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="628,175" sap2010:WorkflowViewState.IdRef="NWindowOperation_7" Operation="ToForeground" ScopeIdentifier="a29a25d5-d096-43c3-9268-5a0e861f2c3e" Version="V5" />
+              <Sequence DisplayName="PDF資料をサイトからダウンロード" sap:VirtualizedContainerService.HintSize="628,859.5" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="リンクから資料のURLを取得" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,196" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[relativeUrl]" ScopeIdentifier="a29a25d5-d096-43c3-9268-5a0e861f2c3e" Version="V5">
+                  <uix:NGetAttributeGeneric.Target>
+                    <uix:TargetAnchorable BrowserURL="tcsw.tvac.or.jp/tekiseika" ContentHash="BGgNAcvACU2FghfdAfRkjQ" DesignTimeRectangle="334, 1064, 894, 32" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl href='documents/R8.4kujyotaiou3.pdf' idx='2' /&gt;" Guid="d1aed669-81b3-4d35-851d-31bf76902d2e" InformativeScreenshot="f7670dd1975994b50b209aa72ab6a1b2.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/WXz0TNp_yU6C-Vs7d54msg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='運営適正化委員会事業｜東京都社会福祉協議会' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:NGetAttributeGeneric.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NGetAttributeGeneric>
+                <Assign DisplayName="資料のURLを作成" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[absoluteUrl]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[New Uri(New Uri(baseUrl), relativeUrl).AbsoluteUri]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+                <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xA;    ' 変更理由：URLが空のままDownloadFileへ渡されるのを防ぐ&#xA;    If String.IsNullOrWhiteSpace(absoluteUrl) Then&#xA;        Throw New ArgumentException(&quot;absoluteUrl が空です。&quot;)&#xA;    End If&#xA;&#xA;    ' 変更理由：保存パスが正しく生成されているか検証する&#xA;    If String.IsNullOrWhiteSpace(保存パス) Then&#xA;        Throw New ArgumentException(&quot;保存パスが空です。&quot;)&#xA;    End If&#xA;&#xA;    ' 変更理由：BasePathから生成した保存先フォルダの存在を確認する&#xA;    Dim folderPath As String = System.IO.Path.GetDirectoryName(保存パス)&#xA;&#xA;    If String.IsNullOrWhiteSpace(folderPath) OrElse&#xA;       Not System.IO.Directory.Exists(folderPath) Then&#xA;&#xA;        Throw New System.IO.DirectoryNotFoundException(&#xA;            &quot;保存先フォルダが存在しません。&quot; &amp;&#xA;            Environment.NewLine &amp;&#xA;            &quot;保存パス: &quot; &amp; 保存パス&#xA;        )&#xA;    End If&#xA;&#xA;    Using client As New System.Net.WebClient()&#xA;        client.DownloadFile(absoluteUrl, 保存パス)&#xA;    End Using&#xA;&#xA;Catch ex As Exception&#xA;&#xA;    ' 変更理由：URL・保存パス・実際の例外をまとめて確認できるようにする&#xA;    System.Windows.Forms.MessageBox.Show(&#xA;        &quot;URL: &quot; &amp; absoluteUrl &amp;&#xA;        Environment.NewLine &amp;&#xA;        Environment.NewLine &amp;&#xA;        &quot;保存パス: &quot; &amp; 保存パス &amp;&#xA;        Environment.NewLine &amp;&#xA;        Environment.NewLine &amp;&#xA;        &quot;エラー:&quot; &amp;&#xA;        Environment.NewLine &amp;&#xA;        ex.ToString()&#xA;    )&#xA;&#xA;    Throw&#xA;End Try" DisplayName="PDFを直接ダウンロードし保存する" sap:VirtualizedContainerService.HintSize="416,395.5" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                  <ui:InvokeCode.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="absoluteUrl">[absoluteUrl]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="保存パス">[保存パス]</InArgument>
+                  </ui:InvokeCode.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeCode>
+              </Sequence>
+              <Sequence DisplayName="ダウンロードしたPDF資料をExcelに変換する" sap:VirtualizedContainerService.HintSize="628,6943.5" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="PDF変換サイトをブラウザで開く" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="594,6860.5" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V2">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="592,6665.5" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="errorMessage" />
+                          <Variable x:TypeArguments="nsu:ISheet" Name="sheet" />
+                          <Variable x:TypeArguments="x:String" Name="excelpath" />
+                          <Variable x:TypeArguments="sd2:DataTable" Name="dtResult" />
+                          <Variable x:TypeArguments="nxu:XSSFWorkbook" Name="workbook" />
+                          <Variable x:TypeArguments="x:String" Name="text" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NWindowOperation DisplayName="ウィンドウ操作 - ウィンドウを最大化" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,227" sap2010:WorkflowViewState.IdRef="NWindowOperation_4" Operation="Maximize" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5" />
+                        <uix:NWindowOperation DisplayName="ウィンドウ操作 - ウィンドウをフォアグラウンドに移動" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,227" sap2010:WorkflowViewState.IdRef="NWindowOperation_5" Operation="ToForeground" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5" />
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="クリック 'ファイルを選択'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,246.5" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="ilovepdf.com/ja/pdf_to_excel" ContentHash="prYA0JWfdE2ilPr5X4ntdA" DesignTimeRectangle="1051, 771, 660, 160" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pickfiles' tag='A' /&gt;" Guid="9d9b2ebb-da28-4a66-af5e-f7e0a3465da1" InformativeScreenshot="0e36426ea6aa254ff01d7f93678e89b4.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/LHRRFrg1j0mpO_ZyQqFkfw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PDFをEXCELに瞬時に変換' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="資料をダウンロードしたファイルパスをクリック" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,246.5" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="ilovepdf.com/ja/pdf_to_excel" ContentHash="6zwYV5IJZE2hJ9_3yXUzRQ" DesignTimeRectangle="3, 3, 336, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1136' /&gt;&lt;ctrl name='ファイルの種類(T):' role='combo box' /&gt;&lt;ctrl name='ファイルの種類(T):' role='text' /&gt;" Guid="72b40e2f-1a80-4bc1-b996-73b485287c65" InformativeScreenshot="460fa3994936dcd747918295385f3d98.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/AHkCNlV1xUCDrT-iaZdjvA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='開く' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.PointOffset>
+                                <uix:PointOffset Position="BottomRight" X="162" Y="33" />
+                              </uix:TargetAnchorable.PointOffset>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <ui:SetToClipboard DisplayName="クリップボードに設定" sap:VirtualizedContainerService.HintSize="488,92" sap2010:WorkflowViewState.IdRef="SetToClipboard_3" Text="[savepath]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:SetToClipboard>
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="ダウンロードした資料のファイルパスを設定" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,311" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" InteractionMode="HardwareEvents" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(Enter)][u(hk)]" Version="V5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NKeyboardShortcuts>
+                        <uix:NGetText DisplayName="今日の日付を取得" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,195" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" TextString="[text]" Version="V5">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="foxit.com/ja-jp/pdf-to-excel" ContentHash="3M4U-75P0EOAS9cb7d3DKw" DesignTimeRectangle="945, 281, 324, 38" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer ウィンドウ' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='項目ビュー' cls='DirectUIHWND' /&gt;&lt;ctrl name='項目ビュー' role='list' /&gt;&lt;ctrl automationid='0' /&gt;&lt;ctrl automationid='System.DateModified' /&gt;" Guid="c23cffdc-9dd0-4788-b4ab-4c7fe0b3c8ad" InformativeScreenshot="660d018edb979f669880f5f2721a859f.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/NyV5ySBLQ0eIMij0OLwtqg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='開く' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NGetText.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NGetText>
+                        <If Condition="[DateTime.Parse(&#xA;    text.&#xA;        Replace(ChrW(&amp;H200E), &quot;&quot;).&#xA;        Replace(ChrW(&amp;H200F), &quot;&quot;)&#xA;).ToString(&quot;MMdd&quot;) = DateTime.Now.ToString(&quot;MMdd&quot;)]" DisplayName="今日の日付か確認" sap:VirtualizedContainerService.HintSize="488,527.5" sap2010:WorkflowViewState.IdRef="If_2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,90.5" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,297.5" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="クリック '更新日時'並び替え" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,237.5" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="foxit.com/ja-jp/pdf-to-excel" ContentHash="0mTYvJo-H0GKLt2uCRXoiw" DesignTimeRectangle="945, 211, 324, 52" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer ウィンドウ' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='項目ビュー' cls='DirectUIHWND' /&gt;&lt;ctrl name='項目ビュー' role='list' /&gt;&lt;ctrl name='ヘッダー' role='list' /&gt;&lt;ctrl automationid='System.DateModified' /&gt;" Guid="a7241508-d408-4b58-9501-09c433453082" InformativeScreenshot="219a3745e650f536c3ff9e6ed021418b.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/3BqQBZAGw0ysDIBPRVq0KQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='開く' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="一番上をクリック" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,246.5" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="foxit.com/ja-jp/pdf-to-excel" ContentHash="xey-R0OTbEe2oCneIlehLQ" DesignTimeRectangle="361, 275, 990, 48" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer ウィンドウ' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='項目ビュー' cls='DirectUIHWND' /&gt;&lt;ctrl name='項目ビュー' role='list' /&gt;&lt;ctrl automationid='0' /&gt;" Guid="1052b5a8-6d24-49e0-9f9d-bb241ed2c81a" InformativeScreenshot="f13542c59a5114a12c6c18d15ad083cc.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/tim_BKMl30id1hTv7e1s8Q" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='開く' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="ファイルを選択" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,246.5" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="ilovepdf.com/ja/pdf_to_excel" ContentHash="nwLUO0WKNE-mcHsbjodkBg" DesignTimeRectangle="941, 1113, 176, 52" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='開く(&amp;amp;O)' /&gt;" Guid="7fce37e5-1753-4bb6-b88c-9a3a95d9b231" InformativeScreenshot="1124418a09f51b6a019e6149c8feb256.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/ZwHIJNNFFUSYwLgaXGKLyg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='開く' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <Delay DisplayName="待機" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="488,123.5" sap2010:WorkflowViewState.IdRef="Delay_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Delay>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="クリック '変換を開始'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,246.5" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="ilovepdf.com/ja/pdf_to_excel" ContentHash="40oAlz-3jUSbmoRW0N7esg" DesignTimeRectangle="2208, 1675, 262, 96" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='processTaskTextBtn' tag='SPAN' type='' class='' aaname='EXCELに変換' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='EXCELに変換' /&gt;" Guid="d201069e-7ff8-4df9-b68f-ddb06b01dcd3" InformativeScreenshot="be4d6ebac9915fef4713a7326e06e0d6.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/jJXD_ZI700mWFwoeEL6J2A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PDFをEXCELに瞬時に変換' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="2041, 1659, 660, 128" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='processTask' tag='BUTTON' type='' class='btn btn--process btn--red pdfoffice' aaname='EXCELに変換 ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='EXCELに変換' /&gt;" Guid="3d0b261f-c1d0-47ce-b6ab-384044eda9fc" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <uix:NCheckState DisplayName="アプリのステートを確認 '成功しました！'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="558,3670" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Timeout="60000" Version="V5">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="ターゲットが出現" sap:VirtualizedContainerService.HintSize="556,3241" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="クリック 'ファイルをダウンロード'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,246.5" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="ilovepdf.com/ja/download/rtcss0x202bxv79fgbyywvw0cfhpA68flh9289dp9xh3x1mvlz15Ayqj89cyptbxr87Aqp31khc60ftqgA7wjyf7mxtbzp6rdyvnv110m18545q15mrl45dnj60v0kw7tchzbr7qk0zrql5087sg08yAz5wkwplrdxAd2zt9qk51zcs82tmq/20o" ContentHash="NuVymuHwUkOGFnsJg1T7bw" DesignTimeRectangle="897, 643, 72, 72" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='download' tag='A' /&gt;" Guid="04b348bf-7a65-4b3a-a457-1bb75a6e3634" InformativeScreenshot="26a9a0392c0b7bdd2d6eaed81512380a.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/eIxWTGh8ZE6wsriLLFmrMA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ファイルのダウンロード | iLovePDF' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                                    <uix:TargetAnchorable.PointOffset>
+                                      <uix:PointOffset Position="TopRight" X="136" Y="15" />
+                                    </uix:TargetAnchorable.PointOffset>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NClick>
+                              <Delay DisplayName="待機" Duration="00:00:30" sap:VirtualizedContainerService.HintSize="522,123.5" sap2010:WorkflowViewState.IdRef="Delay_9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Delay>
+                              <uix:NCheckState DisplayName="アプリのステートを確認 'Microsoft Excel Workshe…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="522,2811" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5">
+                                <uix:NCheckState.IfExists>
+                                  <Sequence DisplayName="ターゲットが出現" sap:VirtualizedContainerService.HintSize="520,2382" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="保存するファイルパスをクリック" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,246.5" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="foxit.com/ja-jp/pdf-to-excel" ContentHash="fN5HGJGEqEKpLSS8eV8GMw" DesignTimeRectangle="13, 149, 1338, 62" ElementType="Toolbar" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer ウィンドウ' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer ウィンドウ' role='pane' /&gt;&lt;ctrl name='コマンド モジュール' role='tool bar' /&gt;" Guid="ff7f3718-a370-4288-aac2-46b0982e2509" InformativeScreenshot="2dadb83a17b04b417911907c59283fe7.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/a7XUWcwxeE6qMtDevpABAQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='名前を付けて保存' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                                          <uix:TargetAnchorable.PointOffset>
+                                            <uix:PointOffset Position="TopLeft" X="326" Y="-20" />
+                                          </uix:TargetAnchorable.PointOffset>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                    <ui:SetToClipboard DisplayName="保存先を設定" sap:VirtualizedContainerService.HintSize="486,92" sap2010:WorkflowViewState.IdRef="SetToClipboard_4" Text="[savepath]">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:SetToClipboard>
+                                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="保存先のファイルパスを設定" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,311" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" InteractionMode="HardwareEvents" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(Enter)][u(hk)]" Version="V5">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NKeyboardShortcuts>
+                                    <Delay DisplayName="待機" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="486,123.5" sap2010:WorkflowViewState.IdRef="Delay_10" />
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="クリック '保存(&amp;S)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,246.5" sap2010:WorkflowViewState.IdRef="NClick_21" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4217a350-6211-4a8e-98f6-b87585f6a2fb" Version="V5">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="foxit.com/ja-jp/pdf-to-excel" ContentHash="6-D1twc7oUuMauyQ5IjUmA" DesignTimeRectangle="941, 1113, 176, 52" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='保存(&amp;amp;S)' /&gt;" Guid="a82637cf-8133-41b7-b79b-8bed93781e38" InformativeScreenshot="a223ea6dfd4aeadbe73b8675a03354ba.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/wIEqr-gmckGLCCTpRthliQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='名前を付けて保存' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                      </uix:NClick.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                    <p:CVScope DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" ContinueOnError="True" CvMethod="ElementDetection, OCR" DesignTimeCacheId="e48c11c5-832d-408f-b736-03eea62dc49a" DisplayName="CV 画面スコープ 'pane'" sap:VirtualizedContainerService.HintSize="486,1302.5" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
+                                      <p:CVScope.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="実行" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:Boolean" Name="isdownloaddialog" />
+                                            </Sequence.Variables>
+                                            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'ל&quot;&quot;30-FRfTec' (25,27,162,19)&quot;]" DesignTimeCacheId="e48c11c5-832d-408f-b736-03eea62dc49a" DesignTimeScaleFactor="2" DisplayName="CV 要素の有無 - テキスト" sap:VirtualizedContainerService.HintSize="452,170.5" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="69844e884c6bca49c6eb795c28207eac" NumberOfScrolls="2" Result="[isdownloaddialog]" ScrollDirection="None" Version="V6">
+                                              <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                                                <uc:CvDescriptor Id="b7c6135c-ea42-4d0f-abd4-a54bc7a9b3f0">
+                                                  <uc:CvDescriptor.Target>
+                                                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="25, 27, 162, 19" ElementType="Text" Text="ל&quot;30-FRfTec" />
+                                                  </uc:CvDescriptor.Target>
+                                                </uc:CvDescriptor>
+                                              </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                                            </p:CvElementExistsWithDescriptor>
+                                            <If Condition="[isdownloaddialog = True]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="452,791" sap2010:WorkflowViewState.IdRef="If_4">
+                                              <If.Then>
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,570" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (303,87,137,48)&quot; +&#xA;&quot;Anchor: Text '5י50-FERf' (322,103,98,17)&quot;]" DesignTimeCacheId="e48c11c5-832d-408f-b736-03eea62dc49a" DesignTimeScaleFactor="2" DisplayName="CV クリック - 'Button'" sap:VirtualizedContainerService.HintSize="416,220" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="48d514554fecc6fc2e13bf728c0ea096" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                                    <p:CvClickWithDescriptor.CursorPosition>
+                                                      <ui:CursorPosition Position="Center">
+                                                        <ui:CursorPosition.OffsetX>
+                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                        </ui:CursorPosition.OffsetX>
+                                                        <ui:CursorPosition.OffsetY>
+                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                        </ui:CursorPosition.OffsetY>
+                                                      </ui:CursorPosition>
+                                                    </p:CvClickWithDescriptor.CursorPosition>
+                                                    <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                                      <uc:CvDescriptor Id="bb4324a8-3908-43e2-8cee-0a78941b3821">
+                                                        <uc:CvDescriptor.Anchors>
+                                                          <x:Array Type="uc:CvElementDescriptor">
+                                                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="322, 103, 98, 17" ElementType="Text" Text="5י50-FERf" />
+                                                          </x:Array>
+                                                        </uc:CvDescriptor.Anchors>
+                                                        <uc:CvDescriptor.Target>
+                                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="303, 87, 137, 48" ElementType="Button" />
+                                                        </uc:CvDescriptor.Target>
+                                                      </uc:CvDescriptor>
+                                                    </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                                    <p:CvClickWithDescriptor.Target>
+                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="69e3de2a-4d98-401a-9d7e-90e40cdc3c31">
+                                                        <ui:Target.TimeoutMS>
+                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                        </ui:Target.TimeoutMS>
+                                                        <ui:Target.WaitForReady>
+                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                        </ui:Target.WaitForReady>
+                                                      </ui:Target>
+                                                    </p:CvClickWithDescriptor.Target>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </p:CvClickWithDescriptor>
+                                                  <uix:NWindowOperation DisplayName="ウィンドウを閉じる" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,290" sap2010:WorkflowViewState.IdRef="NWindowOperation_9" Operation="Close" ScopeIdentifier="a29a25d5-d096-43c3-9268-5a0e861f2c3e" Version="V5">
+                                                    <uix:NWindowOperation.Target>
+                                                      <uix:TargetAnchorable BrowserURL="downloads" DesignTimeRectangle="0, 0, 2762, 1754" Guid="fb3ffba4-2df0-4887-9a93-4a0846306495" InformativeScreenshot="f8e72cc8dadb454581fbb957f55cd528.jpg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ダウンロード履歴 - Google Chrome' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                                    </uix:NWindowOperation.Target>
+                                                  </uix:NWindowOperation>
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.5" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </p:CVScope.Body>
+                                      <p:CVScope.DesignTimeCache>
+                                        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                                      </p:CVScope.DesignTimeCache>
+                                      <p:CVScope.DesignTimeCacheContainer>
+                                        <uc:CvCacheContainer>
+                                          <uc:CvCacheContainer.Caches>
+                                            <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                                              <uc:CVCache DataSent="False" DisplayName="画面 CV クリック - '5י50-FERf' (Main)" Id="e48c11c5-832d-408f-b736-03eea62dc49a" InformativeScreenshot="b7ec7e48f8c3a596e0cb0cfe1e6eca99" LogicalPosition="906, 176" OcrText="ל&quot;30-FRfTec &#xA; 41&lt; Chrome? &#xA; 5י50-FERf *7" Position="906, 176" ScaleFactor="2" ScreenshotGuid="2ca72733-4b14-4f8c-a280-5f5d6fb43557" ServerVersion="24.10">
+                                                <uc:CVCache.CvAnchorRelations>
+                                                  <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                                                </uc:CVCache.CvAnchorRelations>
+                                                <uc:CVCache.CvUiElements>
+                                                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="8">
+                                                    <uc:CvElementInfo Category="Button" Description="Button" Region="303, 87, 137, 48" />
+                                                    <uc:CvElementInfo Category="Button" Description="Button" Region="234, 90, 68, 41" />
+                                                    <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="235, 90, 66, 43" />
+                                                    <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="252, 100, 31, 22" />
+                                                    <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="6, 1, 448, 145" />
+                                                    <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="304, 87, 134, 47" />
+                                                  </scg:List>
+                                                </uc:CVCache.CvUiElements>
+                                                <uc:CVCache.OcrTexts>
+                                                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="6">
+                                                    <uc:OcrTextInfo Region="25, 27, 162, 19" Text="ל&quot;30-FRfTec" />
+                                                    <uc:OcrTextInfo Region="25, 58, 36, 17" Text="41&lt;" />
+                                                    <uc:OcrTextInfo Region="61, 60, 48, 14" Text="Chrome" />
+                                                    <uc:OcrTextInfo Region="189, 59, 10, 14" Text="?" />
+                                                    <uc:OcrTextInfo Region="322, 103, 98, 17" Text="5י50-FERf" />
+                                                    <uc:OcrTextInfo Region="254, 104, 29, 16" Text="*7" />
+                                                  </scg:List>
+                                                </uc:CVCache.OcrTexts>
+                                              </uc:CVCache>
+                                            </scg:List>
+                                          </uc:CvCacheContainer.Caches>
+                                        </uc:CvCacheContainer>
+                                      </p:CVScope.DesignTimeCacheContainer>
+                                      <p:CVScope.OCREngine>
+                                        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                          <ActivityFunc.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                          </ActivityFunc.Argument>
+                                          <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="452,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_2" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" UseSeparateOcrProcess="True" />
+                                        </ActivityFunc>
+                                      </p:CVScope.OCREngine>
+                                      <p:CVScope.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b4cf915-47e8-437c-9bdc-0c855907a8fa" InformativeScreenshot="8431cee00ba844b1217156cc3c7b4b1d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ダウンロードが進行中です' /&gt;&lt;ctrl name='ダウンロードが進行中です' role='dialog' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </p:CVScope.Target>
+                                      <p:CVScope.UseLocalServer>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </p:CVScope.UseLocalServer>
+                                    </p:CVScope>
+                                  </Sequence>
+                                </uix:NCheckState.IfExists>
+                                <uix:NCheckState.IfNotExists>
+                                  <Sequence DisplayName="ターゲットが出現しない" sap:VirtualizedContainerService.HintSize="520,90.5" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </uix:NCheckState.IfNotExists>
+                                <uix:NCheckState.Target>
+                                  <uix:TargetAnchorable BrowserURL="ilovepdf.com/ja/download/lyxr7sA0tmlkgk4ymksx3g1hlg74k4dk757468jcp2nzyhh3A6dl601n91w2vbjj92r0rpwh2wg57fpc11dfAv0xbw958t42cs7tj7k18wxxfdfhv89r7kh4c3xg00t8tzbtk3bhyjnlgnmhv3tqn6kxnywAxAm69rk0j43v3v71q3w532t1/51o" DesignTimeRectangle="3, 3, 1038, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer ウィンドウ' cls='DirectUIHWND' /&gt;&lt;wnd aaname='ファイルの種類:' cls='ComboBox' /&gt;&lt;ctrl name='ファイルの種類:' role='combo box' /&gt;&lt;ctrl role='text' /&gt;" Guid="2e877906-a626-45ee-9794-95b4ce0eca2c" InformativeScreenshot="605b9e529b795a15270e0b8fce02fdd0.jpg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='名前を付けて保存' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                </uix:NCheckState.Target>
+                              </uix:NCheckState>
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <Sequence DisplayName="ターゲットが出現しない" sap:VirtualizedContainerService.HintSize="556,90.5" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable BrowserURL="ilovepdf.com/ja/download/4v3lsmmp5fcA4xtkq8rt2rttmgtqgypdz77vkj13d342t5y0rhkn27gjtwpc6w90wk49mznyx1kxmdtsxr587xrymfyqbjqzwlrfjzt3hz2vc4fjnc9xwwphm4301t16qg04th67n0l7d1njpsdxx0zyAh3nj8yAqxAwc1phlh7gsj39yjkq/91o" ContentHash="N3kaVu7_f0KYpEdQgzk6nQ" DesignTimeRectangle="198, 471, 2336, 60" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" Guid="2534f5dc-a750-4741-ab88-d40076057ab7" InformativeScreenshot="8da16529b8bd917db3a5efbc654677a5.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/3Egbf-doqUm-REEGmdp1Ng" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ファイルのダウンロード | iLovePDF' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NCheckState.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheckState>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.OCREngine>
+                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                      <ActivityFunc.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                      </ActivityFunc.Argument>
+                    </ActivityFunc>
+                  </uix:NApplicationCard.OCREngine>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="-13, -13, 2762, 1850" BrowserType="Chrome" ContentHash="pxSwhNdiM0Kuqhe9OuWG1w" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACsElEQVRYR+2XO2gUURiF4xOtND46CxHEkP2T3WMSMKjYiI0WggEFG1FhxUcliYZgWsFCIT7iI2hjp42VorEVQcRHY6Ux2RNfGw0mEpGNXvmXO8vNndns7rhrlQOnWJg55+POzL3/1tXNyRMh6qWEbCHkNCF9hJwn5AQhIGSxXlN12eL5hOwk5B4h44QYx38I+UTIbUI22evdexcQ0sFkYydTieVMJfyK4rIBSwg5RciYVxzld4TsI2Ses2I9bGke/7Bt8zRTiT6mEsvKgrABGtRJyFREWTF/JmS3vb+bkJ+jbSkzMXDdjB1N5zJNDRfLgrABO2ygX1LKrwk5Q8iX/O/WpJl6PGhymRGTTR9SiEslIQhZZJ+rH16O9b3IFX4rwOBDo8oNDZls+rBCXJ71nSCkmZDhiPDK7QA4ENOZpoYrRSEIOUDIr1BYHHsAeYj3QyZ7JA/RHwlBSK9dynBgpY4AiIConwFBSBchv0NhcVwEQOVAXJ0BYT+lH6GwOJ4FQOVAXCtAELKGkBehsDjOAzzye2coNzJsxo6ldbNSiNXBPnAuFBbHLc3ma3eXmbh5I78hRfrWgPnW22NG21snmWzsCAA2EPIqFBjHqUbDZAmnEoYbm+4SsjIACN6Fj6HA2vglIcnCqeqcB3rAMOKGavo5Ie3uaepDbCfkacSN/+ppQnTZE6FyD0K9zg4h/kwQ17rVnyRkRWSxLwuhh9QuQp5EBJZrPajuENIWzA5ly1mNtYT0VzgrqLN2wKmvqNiXhdCJ53jh3C/tN3b1dMTzIyuXhdCwvYRkIgpdP/NnxqrIeSR7CBmNKFbrJ9Za9fJADsRBQr575W8J2Vqz8kC2YCEhZ505YpKQ/TUvD2SLVhHywAJcqNkflmKyEDpN3ydk/X8tV1kA3ax0nqhsk5mTo7867ThJ/6nUIQAAAABJRU5ErkJggg==" InformativeScreenshot="cf2c921279916c8cb726381afe102857.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/Lh-0XwKyQk-FGKrZwPFgJg" Selector="&lt;html app='chrome.exe' title='PDFをEXCELに瞬時に変換' /&gt;" Url="https://www.ilovepdf.com/ja/pdf_to_excel" Version="V3">
+                      <uix:TargetApp.Arguments>
+                        <InArgument x:TypeArguments="x:String" />
+                      </uix:TargetApp.Arguments>
+                      <uix:TargetApp.WorkingDirectory>
+                        <InArgument x:TypeArguments="x:String" />
+                      </uix:TargetApp.WorkingDirectory>
+                    </uix:TargetApp>
+                  </uix:NApplicationCard.TargetApp>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NApplicationCard>
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.OCREngine>
+          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+            <ActivityFunc.Argument>
+              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+            </ActivityFunc.Argument>
+          </ActivityFunc>
+        </uix:NApplicationCard.OCREngine>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-13, -13, 2762, 1754" BrowserType="Chrome" ContentHash="1RcfY-dSu0-koBZ4oC2Wkw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAIISURBVDhPY2AY3kCIi02Yn4NFAF0cJ+ARk1HiEZdXBbFFeDhETwUJ3tnvL3SBl4ONFywvL6PNJS4qj64PDDh5+AWVKzY8Uqje/oaFR0SEm4WVe5+3yIXNHqJHWBiYWNjExRX45rT/EOoqv87GycGNrp+BlZ2DUyGufa1KxrR9qqriei7WAi65UZL5meES2Y6W/E7KWpLGoo2FJ4QzYxYxs7CwoutnYGFmYpEw9YlwL63Z8/4435f/t9n+/7/KDMG32f4/OyLw0agxcYeQpWkACyMjC4pmPnE5FcWUidvFG0//d+hf+f/gYtET0+pEp707yvnx+QHe11NrRafuWy5+Vn5Z1X/W+V3/hYtS1nGJisiCNYtpW7rKl667L9N+7r9U49G/8oXLb7KwcnExs7CzP9zN8+TyRsFrDAysrGw8fALcE6qess9r/8e6rO8/X0fZNSF1FVMGs4ZN9+Saj/1VcE+qUixacUOmcNUdJmY2Nl4edt4ne3meX98seIuVhYWVmZOLl2NS7WvRluLTEpH+zVxLev5btVVtY+DiFxYTkNc0YmNmYpPLmnNKOnvBRWYWNjYebnae65u4b55aKXAWZAALJycvR3f5PcGKjF2sDAys/Ooq5ixcnHzwcGBkYGBk4RWWZOYVkWJgYGRkYmRkkhJjlJYUZZIEyYGFBPmlmfh5xZGCbzgAAAoTkaY6jvu9AAAAAElFTkSuQmCC" InformativeScreenshot="569d81a39c6678a327e7399027deabd6.jpg" Reference="c_veQxnNcEqCAHsgKse5tg/2vYVCC1Q30GITmAFJgRDdQ" Selector="&lt;html app='chrome.exe' title='運営適正化委員会事業｜東京都社会福祉協議会' /&gt;" Url="[baseUrl]" Version="V3">
+            <uix:TargetApp.Arguments>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.Arguments>
+            <uix:TargetApp.WorkingDirectory>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.WorkingDirectory>
+          </uix:TargetApp>
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <Sequence DisplayName="データを取得して、出力ファイルに書き込み" sap:VirtualizedContainerService.HintSize="664,3172.5" sap2010:WorkflowViewState.IdRef="Sequence_17">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="variable1" />
+          <Variable x:TypeArguments="sd2:DataTable" Name="dtResult" />
+          <Variable x:TypeArguments="x:String" Name="savepath" />
+          <Variable x:TypeArguments="x:String" Name="excelpath" />
+          <Variable x:TypeArguments="x:String" Name="errorMessage" />
+          <Variable x:TypeArguments="nxu:XSSFWorkbook" Name="workbook" />
+          <Variable x:TypeArguments="x:String" Name="result" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="522,176" sap2010:WorkflowViewState.IdRef="Assign_8">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[savepath]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String" xml:space="preserve">[Path.Combine(
+    BasePath,
+    "Data",
+    "苦情問い合わせ連絡先リスト_" &amp;
+    Now.ToString("yyyyMMdd") &amp;
+    ".xlsx"
+)]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:BuildDataTable DataTable="{x:Null}" DisplayName="データ テーブルを構築" sap:VirtualizedContainerService.HintSize="522,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;リンク&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;機関名&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;住所&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;電話番号&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;FAX_x30FB_E-mail&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+        <ui:InvokeCode ContinueOnError="{x:Null}" Code="errorMessage = String.Empty&#xA;dtResult = New System.Data.DataTable()&#xA;dtResult.Columns.Add(&quot;機関名&quot;, GetType(String))&#xA;dtResult.Columns.Add(&quot;リンク&quot;, GetType(String))&#xA;dtResult.Columns.Add(&quot;住所&quot;, GetType(String))&#xA;dtResult.Columns.Add(&quot;電話番号&quot;, GetType(String))&#xA;dtResult.Columns.Add(&quot;FAX・E-mail&quot;, GetType(String))&#xA;&#xA;Try&#xA;    ' 入力値を検証する&#xA;    If String.IsNullOrWhiteSpace(savePath) Then&#xA;        Throw New ArgumentException(&quot;savePathが指定されていません。&quot;)&#xA;    End If&#xA;&#xA;    If Not System.IO.File.Exists(savePath) Then&#xA;        Throw New System.IO.FileNotFoundException(&#xA;            &quot;Excelファイルが見つかりません。&quot;,&#xA;            savePath)&#xA;    End If&#xA;&#xA;    Using fs As New System.IO.FileStream(&#xA;        savePath,&#xA;        System.IO.FileMode.Open,&#xA;        System.IO.FileAccess.Read,&#xA;        System.IO.FileShare.ReadWrite)&#xA;&#xA;        Using workbook As New NPOI.XSSF.UserModel.XSSFWorkbook(fs)&#xA;&#xA;            If workbook.NumberOfSheets &lt;= 0 Then&#xA;                Throw New InvalidOperationException(&#xA;                    &quot;Excelブックにシートがありません。&quot;)&#xA;            End If&#xA;&#xA;            Dim sheet As NPOI.SS.UserModel.ISheet =&#xA;                workbook.GetSheetAt(0)&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;' C列で実際に値が入っている最終行を取得する&#xA;&#x9;&#x9;&#x9;Dim lastDataRow As Integer = -1&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;For checkRowIndex As Integer =&#xA;&#x9;&#x9;&#x9;    sheet.LastRowNum To 7 Step -1&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;    Dim checkRow As NPOI.SS.UserModel.IRow =&#xA;&#x9;&#x9;&#x9;        sheet.GetRow(checkRowIndex)&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;    If checkRow Is Nothing Then&#xA;&#x9;&#x9;&#x9;        Continue For&#xA;&#x9;&#x9;&#x9;    End If&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;    Dim checkCell As NPOI.SS.UserModel.ICell =&#xA;&#x9;&#x9;&#x9;        checkRow.GetCell(2)&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;    If checkCell IsNot Nothing AndAlso&#xA;&#x9;&#x9;&#x9;       Not String.IsNullOrWhiteSpace(&#xA;&#x9;&#x9;&#x9;           checkCell.ToString()) Then&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;        lastDataRow = checkRowIndex&#xA;&#x9;&#x9;&#x9;        Exit For&#xA;&#x9;&#x9;&#x9;    End If&#xA;&#x9;&#x9;&#x9;Next&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;If lastDataRow &lt; 7 Then&#xA;&#x9;&#x9;&#x9;    Throw New InvalidOperationException(&#xA;&#x9;&#x9;&#x9;        &quot;C8以降にデータがありません。&quot;)&#xA;&#x9;&#x9;&#x9;End If&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&#xA;&#x9;&#x9;&#x9;    &quot;C列の最終データ行：&quot; &amp;&#xA;&#x9;&#x9;&#x9;    (lastDataRow + 1).ToString())&#xA;&#xA;            Dim hasCurrentRecord As Boolean = False&#xA;&#xA;            Dim institutionNames As New System.Collections.Generic.List(Of String)()&#xA;            Dim linkUrls As New System.Collections.Generic.List(Of String)()&#xA;            Dim addresses As New System.Collections.Generic.List(Of String)()&#xA;            Dim phoneNumbers As New System.Collections.Generic.List(Of String)()&#xA;            Dim faxNumbers As New System.Collections.Generic.List(Of String)()&#xA;            Dim emailAddresses As New System.Collections.Generic.List(Of String)()&#xA;&#xA;            ' 最終レコード確定のため、最終行の1行後まで処理する&#xA;            For rowIndex As Integer = 7 To lastDataRow + 1&#xA;&#xA;                Try&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Dim isEndOfSheet As Boolean =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;    rowIndex &gt; lastDataRow&#xA;&#xA;                    Dim cell As NPOI.SS.UserModel.ICell = Nothing&#xA;                    Dim cellText As String = String.Empty&#xA;                    Dim hyperlink As NPOI.SS.UserModel.IHyperlink = Nothing&#xA;                    Dim currentCellHasLink As Boolean = False&#xA;                    Dim normalizedText As String = String.Empty&#xA;                    Dim lines() As String = New String() {}&#xA;                    Dim firstLine As String = String.Empty&#xA;                    Dim firstLineIsEightPoint As Boolean = False&#xA;                    Dim currentCellIsInstitution As Boolean = False&#xA;&#xA;                    If Not isEndOfSheet Then&#xA;                        Dim row As NPOI.SS.UserModel.IRow =&#xA;                            sheet.GetRow(rowIndex)&#xA;&#xA;                        If row IsNot Nothing Then&#xA;                            cell = row.GetCell(2)&#xA;                        End If&#xA;&#xA;                        If cell IsNot Nothing Then&#xA;                            cellText = cell.ToString()&#xA;&#xA;                            hyperlink = cell.Hyperlink&#xA;&#xA;                            currentCellHasLink =&#xA;                                hyperlink IsNot Nothing AndAlso&#xA;                                Not String.IsNullOrWhiteSpace(&#xA;                                    hyperlink.Address)&#xA;&#xA;                            normalizedText =&#xA;                                cellText.Replace(vbCrLf, vbLf).&#xA;                                         Replace(vbCr, vbLf)&#xA;&#xA;                            lines = normalizedText.Split(&#xA;                                New String() {vbLf},&#xA;                                System.StringSplitOptions.None)&#xA;&#xA;                            If lines.Length &gt; 0 Then&#xA;                                firstLine = lines(0).Trim()&#xA;                            End If&#xA;&#xA;                            ' 1行目の先頭文字に適用されているフォントサイズを確認する&#xA;                            If cell.CellType = NPOI.SS.UserModel.CellType.String Then&#xA;                                Dim detectionRichText As NPOI.XSSF.UserModel.XSSFRichTextString =&#xA;                                    TryCast(&#xA;                                        cell.RichStringCellValue,&#xA;                                        NPOI.XSSF.UserModel.XSSFRichTextString)&#xA;&#xA;                                Dim firstCharacterIndex As Integer = 0&#xA;&#xA;                                While firstCharacterIndex &lt; cellText.Length AndAlso&#xA;                                      Char.IsWhiteSpace(cellText(firstCharacterIndex))&#xA;&#xA;                                    firstCharacterIndex += 1&#xA;                                End While&#xA;&#xA;                                Dim firstLineFont As NPOI.SS.UserModel.IFont = Nothing&#xA;&#xA;                                If detectionRichText IsNot Nothing Then&#xA;                                    For detectionRunIndex As Integer =&#xA;                                        0 To detectionRichText.NumFormattingRuns - 1&#xA;&#xA;                                        Dim detectionStartIndex As Integer =&#xA;                                            detectionRichText.GetIndexOfFormattingRun(&#xA;                                                detectionRunIndex)&#xA;&#xA;                                        Dim detectionEndIndex As Integer =&#xA;                                            cellText.Length&#xA;&#xA;                                        If detectionRunIndex + 1 &lt;&#xA;                                           detectionRichText.NumFormattingRuns Then&#xA;&#xA;                                            detectionEndIndex =&#xA;                                                detectionRichText.GetIndexOfFormattingRun(&#xA;                                                    detectionRunIndex + 1)&#xA;                                        End If&#xA;&#xA;                                        If firstCharacterIndex &gt;= detectionStartIndex AndAlso&#xA;                                           firstCharacterIndex &lt; detectionEndIndex Then&#xA;&#xA;                                            firstLineFont =&#xA;                                                detectionRichText.GetFontOfFormattingRun(&#xA;                                                    detectionRunIndex)&#xA;&#xA;                                            Exit For&#xA;                                        End If&#xA;                                    Next&#xA;                                End If&#xA;&#xA;                                ' 個別書式がなければセル全体のフォントを使用する&#xA;                                If firstLineFont Is Nothing AndAlso&#xA;                                   cell.CellStyle IsNot Nothing Then&#xA;&#xA;                                    firstLineFont =&#xA;                                        workbook.GetFontAt(&#xA;                                            CShort(cell.CellStyle.FontIndex))&#xA;                                End If&#xA;&#xA;                                If firstLineFont IsNot Nothing Then&#xA;                                    firstLineIsEightPoint =&#xA;                                        Math.Abs(&#xA;                                            CDbl(firstLineFont.FontHeightInPoints) - 8.0&#xA;                                        ) &lt; 0.1&#xA;                                End If&#xA;                            End If&#xA;&#xA;                            ' 1行目が文字列で、住所・電話・注記・見出しでなければ機関名と判定する&#xA;                            currentCellIsInstitution =&#xA;                                Not String.IsNullOrWhiteSpace(firstLine) AndAlso&#xA;                                Not firstLineIsEightPoint AndAlso&#xA;                                Not System.Text.RegularExpressions.Regex.IsMatch(&#xA;                                    firstLine,&#xA;                                    &quot;[0-9０-９]&quot;) AndAlso&#xA;                                Not System.Text.RegularExpressions.Regex.IsMatch(&#xA;                                    firstLine,&#xA;                                    &quot;^(?:℡|TEL|電話|FAX|E-?mail|E-?nail)&quot;,&#xA;                                    System.Text.RegularExpressions.RegexOptions.IgnoreCase) AndAlso&#xA;                                Not firstLine.StartsWith(&quot;※&quot;) AndAlso&#xA;                                Not firstLine.StartsWith(&quot;（&quot;) AndAlso&#xA;                                Not firstLine.StartsWith(&quot;(&quot;) AndAlso&#xA;                                firstLine &lt;&gt; &quot;機関名&quot; AndAlso&#xA;                                firstLine &lt;&gt; &quot;所在地&quot; AndAlso&#xA;                                firstLine &lt;&gt; &quot;電話番号&quot;&#xA;                        End If&#xA;                    End If&#xA;&#xA;                    ' 住所または電話番号を取得済みの状態で次の機関名が来たら新レコード&#xA;                    Dim startsNextRecord As Boolean =&#xA;                        currentCellIsInstitution AndAlso&#xA;                        hasCurrentRecord AndAlso&#xA;                        (addresses.Count &gt; 0 OrElse phoneNumbers.Count &gt; 0)&#xA;&#xA;                    ' 現在のレコードを確定する&#xA;                    If (startsNextRecord OrElse isEndOfSheet) AndAlso&#xA;                       hasCurrentRecord Then&#xA;&#xA;                        Dim institutionName As String =&#xA;                            String.Join(&quot;・&quot;, institutionNames)&#xA;&#xA;                        Dim linkUrl As String =&#xA;                            String.Join(&quot;,&quot;, linkUrls)&#xA;&#xA;                        Dim address As String =&#xA;                            String.Join(&quot;,&quot;, addresses)&#xA;&#xA;                        Dim phoneNumber As String =&#xA;                            String.Join(&quot;,&quot;, phoneNumbers)&#xA;&#xA;                        Dim faxAndEmailParts As New System.Collections.Generic.List(Of String)()&#xA;&#xA;                        For Each faxNumber As String In faxNumbers&#xA;                            faxAndEmailParts.Add(&quot;FAX &quot; &amp; faxNumber)&#xA;                        Next&#xA;&#xA;                        For Each emailAddress As String In emailAddresses&#xA;                            faxAndEmailParts.Add(&quot;E-mail &quot; &amp; emailAddress)&#xA;                        Next&#xA;&#xA;                        Dim faxAndEmail As String =&#xA;                            String.Join(&quot;, &quot;, faxAndEmailParts)&#xA;&#xA;&#xA;                        ' リンクを除き、機関名・住所・電話番号の欠損数を数える&#xA;                        Dim missingCount As Integer = 0&#xA;&#xA;                        If String.IsNullOrWhiteSpace(institutionName) Then&#xA;                            missingCount += 1&#xA;                        End If&#xA;&#xA;                        If String.IsNullOrWhiteSpace(address) Then&#xA;                            missingCount += 1&#xA;                        End If&#xA;&#xA;                        If String.IsNullOrWhiteSpace(phoneNumber) Then&#xA;                            missingCount += 1&#xA;                        End If&#xA;&#xA;                        ' リンク以外で2項目以上欠損したレコードはスキップする&#xA;                        If missingCount &lt; 2 Then&#xA;                            Dim resultRow As System.Data.DataRow =&#xA;                                dtResult.NewRow()&#xA;&#xA;                            resultRow(&quot;機関名&quot;) = institutionName&#xA;                            resultRow(&quot;リンク&quot;) = linkUrl&#xA;                            resultRow(&quot;住所&quot;) = address&#xA;                            resultRow(&quot;電話番号&quot;) = phoneNumber&#xA;                            resultRow(&quot;FAX・E-mail&quot;) = faxAndEmail&#xA;&#xA;                            dtResult.Rows.Add(resultRow)&#xA;                        Else&#xA;                            Dim skipMessage As String =&#xA;                                &quot;Excel &quot; &amp; rowIndex.ToString() &amp;&#xA;                                &quot;行目の直前までのレコード：&quot; &amp;&#xA;                                &quot;機関名・住所・電話番号のうち&quot; &amp;&#xA;                                missingCount.ToString() &amp;&#xA;                                &quot;項目を取得できなかったためスキップしました。&quot;&#xA;&#xA;                            If Not String.IsNullOrEmpty(errorMessage) Then&#xA;                                errorMessage &amp;= Environment.NewLine&#xA;                            End If&#xA;&#xA;                            errorMessage &amp;= skipMessage&#xA;                            Console.WriteLine(skipMessage)&#xA;                        End If&#xA;&#xA;                        ' 次レコード用に初期化する&#xA;                        hasCurrentRecord = False&#xA;                        institutionNames.Clear()&#xA;                        linkUrls.Clear()&#xA;                        addresses.Clear()&#xA;                        phoneNumbers.Clear()&#xA;                        faxNumbers.Clear()&#xA;                        emailAddresses.Clear()&#xA;                    End If&#xA;&#xA;                    If isEndOfSheet Then&#xA;                        Exit For&#xA;                    End If&#xA;&#xA;                    ' 空白セルは連続状態を終了させる&#xA;                    If cell Is Nothing OrElse&#xA;                       String.IsNullOrWhiteSpace(cellText) Then&#xA;&#xA;                        Continue For&#xA;                    End If&#xA;&#xA;                    ' 1行目が機関名と判定されたセルでレコードを開始する&#xA;                    If currentCellIsInstitution Then&#xA;                        If Not hasCurrentRecord Then&#xA;                            hasCurrentRecord = True&#xA;                        End If&#xA;                    End If&#xA;&#xA;                    ' 最初の機関名セルより前は処理しない&#xA;                    If Not hasCurrentRecord Then&#xA;                        Continue For&#xA;                    End If&#xA;&#xA;                    ' 1行目の先頭から最初の空白までを機関名として取得する&#xA;                    If currentCellIsInstitution Then&#xA;                        If lines.Length &gt; 0 Then&#xA;                            Dim institutionMatch As System.Text.RegularExpressions.Match =&#xA;                                System.Text.RegularExpressions.Regex.Match(&#xA;                                    firstLine,&#xA;                                    &quot;^[^\s　]+&quot;)&#xA;&#xA;                            If institutionMatch.Success Then&#xA;                                Dim newInstitutionName As String =&#xA;                                    institutionMatch.Value.Trim()&#xA;&#xA;                                If Not String.IsNullOrWhiteSpace(&#xA;                                    newInstitutionName) AndAlso&#xA;                                   Not institutionNames.Contains(&#xA;                                       newInstitutionName) Then&#xA;&#xA;                                    institutionNames.Add(&#xA;                                        newInstitutionName)&#xA;                                End If&#xA;                            End If&#xA;                        End If&#xA;                    End If&#xA;&#xA;                    ' リンクはレコード開始条件にせず、存在する場合だけ保存する&#xA;                    If currentCellHasLink Then&#xA;                        Dim newLinkUrl As String =&#xA;                            hyperlink.Address.Trim()&#xA;&#xA;                        If Not linkUrls.Contains(newLinkUrl) Then&#xA;                            linkUrls.Add(newLinkUrl)&#xA;                        End If&#xA;                    End If&#xA;&#xA;                    ' （区障害者福祉課）などを直前の機関名へ追加する&#xA;                    For Each line As String In lines&#xA;                        Dim trimmedLine As String =&#xA;                            line.Trim()&#xA;&#xA;                        Dim isSupplement As Boolean =&#xA;                            (trimmedLine.StartsWith(&quot;（&quot;) AndAlso&#xA;                             trimmedLine.EndsWith(&quot;）&quot;)) OrElse&#xA;                            (trimmedLine.StartsWith(&quot;(&quot;) AndAlso&#xA;                             trimmedLine.EndsWith(&quot;)&quot;))&#xA;&#xA;                        If isSupplement Then&#xA;                            If institutionNames.Count &gt; 0 Then&#xA;                                Dim lastIndex As Integer =&#xA;                                    institutionNames.Count - 1&#xA;&#xA;                                If Not institutionNames(lastIndex).&#xA;                                    Contains(trimmedLine) Then&#xA;&#xA;                                    institutionNames(lastIndex) =&#xA;                                        institutionNames(lastIndex) &amp;&#xA;                                        trimmedLine&#xA;                                End If&#xA;                            Else&#xA;                                institutionNames.Add(trimmedLine)&#xA;                            End If&#xA;                        End If&#xA;                    Next&#xA;&#xA;                    ' 電話番号をすべて取得する&#xA;                    Dim phoneMatches As System.Text.RegularExpressions.MatchCollection =&#xA;                        System.Text.RegularExpressions.Regex.Matches(&#xA;                            normalizedText,&#xA;                            &quot;(?:℡|TEL|電話)[：: 　\t]*(?&lt;number&gt;[0-9０-９＋+\-‐－ー()（） 　\t]+)&quot;,&#xA;                            System.Text.RegularExpressions.RegexOptions.IgnoreCase)&#xA;&#xA;                    For Each phoneMatch As System.Text.RegularExpressions.Match In phoneMatches&#xA;                        If phoneMatch.Success Then&#xA;                            Dim newPhoneNumber As String =&#xA;                                phoneMatch.Groups(&#xA;                                    &quot;number&quot;).Value.Trim()&#xA;&#xA;                            If Not String.IsNullOrWhiteSpace(&#xA;                                newPhoneNumber) AndAlso&#xA;                               Not phoneNumbers.Contains(&#xA;                                   newPhoneNumber) Then&#xA;&#xA;                                phoneNumbers.Add(&#xA;                                    newPhoneNumber)&#xA;                            End If&#xA;                        End If&#xA;                    Next&#xA;&#xA;                    ' FAX番号を取得する&#xA;                    Dim faxMatches As System.Text.RegularExpressions.MatchCollection =&#xA;                        System.Text.RegularExpressions.Regex.Matches(&#xA;                            normalizedText,&#xA;                            &quot;(?:FAX|Fax)[：: 　\t]*(?&lt;number&gt;[0-9０-９＋+\-‐－ー()（） 　\t]+)&quot;,&#xA;                            System.Text.RegularExpressions.RegexOptions.IgnoreCase)&#xA;&#xA;                    For Each faxMatch As System.Text.RegularExpressions.Match In faxMatches&#xA;                        Dim newFaxNumber As String =&#xA;                            faxMatch.Groups(&quot;number&quot;).Value.Trim()&#xA;&#xA;                        If Not String.IsNullOrWhiteSpace(newFaxNumber) AndAlso&#xA;                           Not faxNumbers.Contains(newFaxNumber) Then&#xA;&#xA;                            faxNumbers.Add(newFaxNumber)&#xA;                        End If&#xA;                    Next&#xA;&#xA;                    ' E-mailと原本の誤植E-nailの両方を取得する&#xA;                    Dim emailMatches As System.Text.RegularExpressions.MatchCollection =&#xA;                        System.Text.RegularExpressions.Regex.Matches(&#xA;                            normalizedText,&#xA;                            &quot;E-(?:mail|nail)[：: 　\t]*(?&lt;email&gt;[A-Za-z0-9._%+\-□＠@]+)&quot;,&#xA;                            System.Text.RegularExpressions.RegexOptions.IgnoreCase)&#xA;&#xA;                    For Each emailMatch As System.Text.RegularExpressions.Match In emailMatches&#xA;                        Dim newEmailAddress As String =&#xA;                            emailMatch.Groups(&quot;email&quot;).Value.Trim().&#xA;                            Replace(&quot;□&quot;, &quot;@&quot;).&#xA;                            Replace(&quot;＠&quot;, &quot;@&quot;)&#xA;&#xA;                        If Not String.IsNullOrWhiteSpace(newEmailAddress) AndAlso&#xA;                           Not emailAddresses.Contains(newEmailAddress) Then&#xA;&#xA;                            emailAddresses.Add(newEmailAddress)&#xA;                        End If&#xA;                    Next&#xA;&#xA;                    ' 8ptの文字をこのセルの住所として取得する&#xA;                    If cell.CellType =&#xA;                       NPOI.SS.UserModel.CellType.String Then&#xA;&#xA;                        Dim richText As NPOI.XSSF.UserModel.XSSFRichTextString =&#xA;                            TryCast(&#xA;                                cell.RichStringCellValue,&#xA;                                NPOI.XSSF.UserModel.XSSFRichTextString)&#xA;&#xA;                        If richText IsNot Nothing Then&#xA;                            Dim fullText As String =&#xA;                                richText.String&#xA;&#xA;                            Dim cellAddressBuilder As New System.Text.StringBuilder()&#xA;&#xA;                            For runIndex As Integer =&#xA;                                0 To richText.NumFormattingRuns - 1&#xA;&#xA;                                Dim startIndex As Integer =&#xA;                                    richText.GetIndexOfFormattingRun(&#xA;                                        runIndex)&#xA;&#xA;                                Dim endIndex As Integer =&#xA;                                    fullText.Length&#xA;&#xA;                                If runIndex + 1 &lt;&#xA;                                   richText.NumFormattingRuns Then&#xA;&#xA;                                    endIndex =&#xA;                                        richText.GetIndexOfFormattingRun(&#xA;                                            runIndex + 1)&#xA;                                End If&#xA;&#xA;                                If startIndex &lt; 0 OrElse&#xA;                                   endIndex &lt;= startIndex Then&#xA;&#xA;                                    Continue For&#xA;                                End If&#xA;&#xA;                                Dim font As NPOI.SS.UserModel.IFont =&#xA;                                    richText.GetFontOfFormattingRun(&#xA;                                        runIndex)&#xA;&#xA;                                If font IsNot Nothing AndAlso&#xA;                                   Math.Abs(&#xA;                                       CDbl(&#xA;                                           font.FontHeightInPoints&#xA;                                       ) - 8.0&#xA;                                   ) &lt; 0.1 Then&#xA;&#xA;                                    Dim addressPart As String =&#xA;                                        fullText.Substring(&#xA;                                            startIndex,&#xA;                                            endIndex - startIndex).&#xA;                                            Trim()&#xA;&#xA;                                    If Not String.IsNullOrWhiteSpace(&#xA;                                        addressPart) Then&#xA;&#xA;                                        If cellAddressBuilder.Length &gt; 0 Then&#xA;                                            cellAddressBuilder.Append(&quot; &quot;)&#xA;                                        End If&#xA;&#xA;                                        cellAddressBuilder.Append(&#xA;                                            addressPart)&#xA;                                    End If&#xA;                                End If&#xA;                            Next&#xA;&#xA;                            Dim newAddress As String =&#xA;                                cellAddressBuilder.ToString().Trim()&#xA;&#xA;                            ' 住所に含まれた電話番号部分を除去する&#xA;                            newAddress =&#xA;                                System.Text.RegularExpressions.Regex.Replace(&#xA;                                    newAddress,&#xA;                                    &quot;(?:℡|TEL|電話|FAX|E-(?:mail|nail))[\s\S]*$&quot;,&#xA;                                    String.Empty,&#xA;                                    System.Text.RegularExpressions.RegexOptions.IgnoreCase&#xA;                                ).Trim()&#xA;&#xA;                            newAddress =&#xA;                                System.Text.RegularExpressions.Regex.Replace(&#xA;                                    newAddress,&#xA;                                    &quot;[\r\n]+&quot;,&#xA;                                    &quot; &quot;).Trim()&#xA;&#xA;                            newAddress =&#xA;                                System.Text.RegularExpressions.Regex.Replace(&#xA;                                    newAddress,&#xA;                                    &quot;[ 　]{2,}&quot;,&#xA;                                    &quot; &quot;).Trim()&#xA;&#xA;                            If Not String.IsNullOrWhiteSpace(&#xA;                                newAddress) AndAlso&#xA;                               Not addresses.Contains(&#xA;                                   newAddress) Then&#xA;&#xA;                                addresses.Add(newAddress)&#xA;                            End If&#xA;                        End If&#xA;                    End If&#xA;&#xA;                    ' 次のセルで連続リンクかどうか判定する&#xA;                Catch rowException As Exception&#xA;                    Dim rowError As String =&#xA;                        &quot;Excel &quot; &amp;&#xA;                        (rowIndex + 1).ToString() &amp;&#xA;                        &quot;行目の処理に失敗しました：&quot; &amp;&#xA;                        rowException.Message&#xA;&#xA;                    If Not String.IsNullOrEmpty(&#xA;                        errorMessage) Then&#xA;&#xA;                        errorMessage &amp;=&#xA;                            Environment.NewLine&#xA;                    End If&#xA;&#xA;                    errorMessage &amp;= rowError&#xA;                    Console.WriteLine(rowError)&#xA;&#xA;                End Try&#xA;            Next&#xA;&#xA;            Console.WriteLine(&#xA;                &quot;保存件数：&quot; &amp;&#xA;                dtResult.Rows.Count.ToString())&#xA;        End Using&#xA;    End Using&#xA;&#xA;Catch ex As Exception&#xA;    errorMessage = ex.ToString()&#xA;    Console.WriteLine(errorMessage)&#xA;End Try" DisplayName="資料からデータを取得" sap:VirtualizedContainerService.HintSize="522,404.5" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+          <ui:InvokeCode.Arguments>
+            <InOutArgument x:TypeArguments="sd2:DataTable" x:Key="dtResult">[dtResult]</InOutArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="savepath">[savePath]</InArgument>
+            <OutArgument x:TypeArguments="x:String" x:Key="errorMessage">[errorMessage]</OutArgument>
+          </ui:InvokeCode.Arguments>
+        </ui:InvokeCode>
+        <ueab:ExcelApplicationCard DisplayName="出力ファイルを選択" sap:VirtualizedContainerService.HintSize="522,2302.5" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="[Path.Combine(&#xA;    BasePath,&#xA;    &quot;虐待防止・苦情問い合わせ連絡先_&quot; &amp;&#xA;    Now.ToString(&quot;yyyyMMdd&quot;) &amp;&#xA;    &quot;.xlsx&quot;&#xA;)]">
+          <ueab:ExcelApplicationCard.Body>
+            <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="520,2072" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtResult]" DisplayName="繰り返し (データ テーブルの各行)" sap:VirtualizedContainerService.HintSize="486,410" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd2:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="450,227" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[CurrentRow("リンク")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object" xml:space="preserve">[If(
+    String.IsNullOrWhiteSpace(CurrentRow("リンク").ToString),
+    "",
+    CurrentRow("リンク").ToString
+)]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
+                <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;苦情相談&quot;).Range(&quot;A2&quot;)]" DisplayName="全データを選択" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="486,223.5" sap2010:WorkflowViewState.IdRef="WriteRangeX_5" IgnoreEmptySource="False" Source="[dtResult.DefaultView.ToTable(False, &quot;機関名&quot;, &quot;電話番号&quot;,&quot;FAX・E-mail&quot;,&quot;住所&quot;,&quot;リンク&quot;)]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ueab:WriteRangeX>
+                <Sequence DisplayName="デザインを整える" sap:VirtualizedContainerService.HintSize="486,1264" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ueab:FindFirstLastDataRowX FirstRowIndex="{x:Null}" BlankRowsToSkip="1" ColumnName="[Excel.Sheet(&quot;苦情相談&quot;).Cell(&quot;A1&quot;).StringValue]" ConfigureLastRowAs="LastPopulatedRow" DisplayName="最後行取得" FirstRowOffset="0" HasHeaders="True" sap:VirtualizedContainerService.HintSize="452,275" sap2010:WorkflowViewState.IdRef="FindFirstLastDataRowX_2" LastRowIndex="[LastRowIndex]" LastRowOffset="0" Range="[Excel.Sheet(&quot;苦情相談&quot;).Range(&quot;A1:A10000&quot;)]" VisibleRowsOnly="False" />
+                  <ueab:InvokeVBAX Result="{x:Null}" CodeFilePath="[Path.Combine(BasePath, &quot;SetComplaintHyperlinks.txt&quot;)]" DisplayName="VBA を呼び出し" EntryMethodName="SetComplaintHyperlinks" sap:VirtualizedContainerService.HintSize="452,359.5" sap2010:WorkflowViewState.IdRef="InvokeVBAX_1" Workbook="[Excel]">
+                    <ueab:InvokeVBAX.Body>
+                      <ActivityAction>
+                        <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="450,90.5" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </ActivityAction>
+                    </ueab:InvokeVBAX.Body>
+                  </ueab:InvokeVBAX>
+                  <ueab:CreateTableX OutTableName="{x:Null}" TableName="{x:Null}" DisplayName="テーブルとして書式設定" HasHeaders="True" sap:VirtualizedContainerService.HintSize="452,176" sap2010:WorkflowViewState.IdRef="CreateTableX_2" Range="[Excel.Sheet(&quot;苦情相談&quot;).Range(&quot;A1:E&quot; &amp; LastRowIndex.ToString())]" />
+                  <ueab:FormatRangeX Font="{x:Null}" DisplayName="セルを書式設定" sap:VirtualizedContainerService.HintSize="452,123.5" sap2010:WorkflowViewState.IdRef="FormatRangeX_2" Range="[Excel.Sheet(&quot;苦情相談&quot;).Range(&quot;A1:E&quot; &amp; LastRowIndex.ToString())]">
+                    <ueab:FormatRangeX.Alignment>
+                      <ui:AlignmentOptions HorizontalAlignment="xlHAlignCenter" VerticalAlignment="xlVAlignCenter" WrapText="True" />
+                    </ueab:FormatRangeX.Alignment>
+                    <ueab:FormatRangeX.Format>
+                      <ueab:GeneralFormat />
+                    </ueab:FormatRangeX.Format>
+                  </ueab:FormatRangeX>
+                  <ueab:AutoFitX Columns="True" DisplayName="縦幅を調整" sap:VirtualizedContainerService.HintSize="452,123.5" sap2010:WorkflowViewState.IdRef="AutoFitX_3" Range="[Excel.Sheet(&quot;苦情相談&quot;).Range(&quot;A1:E&quot; &amp; LastRowIndex.ToString())]" Rows="False" />
+                  <ueab:AutoFitX Columns="False" DisplayName="横幅を調整" sap:VirtualizedContainerService.HintSize="452,114.5" sap2010:WorkflowViewState.IdRef="AutoFitX_4" Range="[Excel.Sheet(&quot;苦情相談&quot;).Range(&quot;A1:E&quot; &amp; LastRowIndex.ToString())]" Rows="True" />
+                </Sequence>
+                <ueab:SaveExcelFileX DisplayName="Excel ファイルを保存" sap:VirtualizedContainerService.HintSize="486,114.5" sap2010:WorkflowViewState.IdRef="SaveExcelFileX_3" Workbook="[Excel]" />
+              </Sequence>
+            </ActivityAction>
+          </ueab:ExcelApplicationCard.Body>
+        </ueab:ExcelApplicationCard>
+        <Delay DisplayName="待機" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="522,114.5" sap2010:WorkflowViewState.IdRef="Delay_7" />
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="BjU1ddxyv0adnwCiaFFw6w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="6zwYV5IJZE2hJ9_3yXUzRQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="adobe.com/jp/acrobat/online/pdf-to-excel.html" DesignTimeRectangle="13, 149, 1338, 62" ElementType="Toolbar" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer ウィンドウ' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer ウィンドウ' role='pane' /&gt;&lt;ctrl name='コマンド モジュール' role='tool bar' /&gt;" Guid="6d847f84-24bc-4577-bdfe-7b72fcc21d01" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='開く' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="ilovepdf.com/ja/pdf_to_excel" DesignTimeRectangle="3, 3, 336, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1136' /&gt;&lt;ctrl name='ファイルの種類(T):' role='combo box' /&gt;&lt;ctrl name='ファイルの種類(T):' role='text' /&gt;" Guid="72b40e2f-1a80-4bc1-b996-73b485287c65" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='開く' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
       <TargetAnchorable.PointOffset>
-        <PointOffset Position="TopRight" X="-311" Y="-22" />
+        <PointOffset Position="BottomRight" X="162" Y="33" />
       </TargetAnchorable.PointOffset>
-      <imageRef attrName="InformativeScreenshot" originalValue="f9b46b3d88aaa7d27d69cf19ba491bff.jpg" xmlns="">0KSNAYdUfY0yTZzHMzViJAw</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="460fa3994936dcd747918295385f3d98.jpg" xmlns="">0jWCmME7HSk6aVJaqJy-UMw</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>
   </ObjectRepositoryTargetData.Data>

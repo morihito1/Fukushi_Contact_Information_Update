@@ -2,8 +2,8 @@
   "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
   "entryPoints": [
     {
-      "filePath": "TokyoMain1.xaml",
-      "uniqueId": "dac96e3b-17d0-4c77-afa2-e382e4f2c6c8",
+      "filePath": "Main1.xaml",
+      "uniqueId": "95f2c1dc-19a7-4a1f-af9c-ac19f1d8f6c3",
       "type": "process",
       "input": {
         "type": "object",

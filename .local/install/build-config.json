@@ -2,8 +2,8 @@
   "Version": "1.0",
   "IncludeWorkflows": [
     "TokyoMainALL.xaml",
-    "TokyoMain1.xaml",
-    "TokyoMain2.xaml",
-    "TokyoMain3.xaml"
+    "Main1.xaml",
+    "Main2.xaml",
+    "Main3.xaml"
   ]
 }
