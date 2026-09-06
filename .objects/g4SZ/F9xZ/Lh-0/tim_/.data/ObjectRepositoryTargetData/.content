@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="xey-R0OTbEe2oCneIlehLQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="foxit.com/ja-jp/pdf-to-excel" DesignTimeRectangle="361, 275, 990, 48" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer ウィンドウ' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='項目ビュー' cls='DirectUIHWND' /&gt;&lt;ctrl name='項目ビュー' role='list' /&gt;&lt;ctrl automationid='0' /&gt;" Guid="1052b5a8-6d24-49e0-9f9d-bb241ed2c81a" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='開く' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="f13542c59a5114a12c6c18d15ad083cc.jpg" xmlns="">0rCg_rF4CD0iIa4AgTFIsHQ</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">Click</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

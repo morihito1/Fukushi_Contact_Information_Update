@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="2heHLZGiUkexUik-8VCVtg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fukushi.metro.tokyo.lg.jp/shougai/shougai_shisaku/gyakutai_kenriyougo/gyakutai_madoguchi" DesignTimeRectangle="720, 851, 937, 37" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_xrdy' tag='A' /&gt;" Guid="8918ba49-745f-4b1b-be32-cf9139136076" ScopeSelectorArgument="&lt;html app='chrome.exe' title='通報・届出等窓口一覧|障害者虐待防止と権利擁護|東京都福祉局' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="9996fd035fe79d7aae04c79f3a1642e9.jpg" xmlns="">0l6UZagcem0u5ShiBGgeIEQ</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">Click</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

@@ -1,9 +1,0 @@
-{
-  "Version": "1.0",
-  "IncludeWorkflows": [
-    "TokyoMainALL.xaml",
-    "Main1.xaml",
-    "Main2.xaml",
-    "Main3.xaml"
-  ]
-}

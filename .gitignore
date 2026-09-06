@@ -1,0 +1,8 @@
+# UiPath generated / local development files
+.codedworkflows/
+.local/
+.objects/
+.project/
+.screenshots/
+.settings/
+.storage/

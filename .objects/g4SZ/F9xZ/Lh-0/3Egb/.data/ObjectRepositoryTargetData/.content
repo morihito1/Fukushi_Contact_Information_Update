@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="N3kaVu7_f0KYpEdQgzk6nQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="ilovepdf.com/ja/download/4v3lsmmp5fcA4xtkq8rt2rttmgtqgypdz77vkj13d342t5y0rhkn27gjtwpc6w90wk49mznyx1kxmdtsxr587xrymfyqbjqzwlrfjzt3hz2vc4fjnc9xwwphm4301t16qg04th67n0l7d1njpsdxx0zyAh3nj8yAqxAwc1phlh7gsj39yjkq/91o" DesignTimeRectangle="198, 471, 2336, 60" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" Guid="2534f5dc-a750-4741-ab88-d40076057ab7" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ファイルのダウンロード | iLovePDF' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="8da16529b8bd917db3a5efbc654677a5.jpg" xmlns="">0sHAgYLNeuUONt2G2TCvViQ</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">CheckState</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

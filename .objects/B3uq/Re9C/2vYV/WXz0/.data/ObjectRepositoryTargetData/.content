@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="BGgNAcvACU2FghfdAfRkjQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="tcsw.tvac.or.jp/tekiseika" DesignTimeRectangle="334, 1064, 894, 32" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl href='documents/R8.4kujyotaiou3.pdf' idx='2' /&gt;" Guid="e9a34c03-95ec-4e3a-a481-0a002f195835" ScopeSelectorArgument="&lt;html app='chrome.exe' title='運営適正化委員会事業｜東京都社会福祉協議会' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="f7670dd1975994b50b209aa72ab6a1b2.jpg" xmlns="">0D7AtqQITHEGgUmoBM885Bw</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">GetAttributeGeneric</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

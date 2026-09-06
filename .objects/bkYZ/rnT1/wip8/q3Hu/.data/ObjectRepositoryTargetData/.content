@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="mcMcj6YAP0-I34M1aeHiuA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/search" DesignTimeRectangle="13, 302, 2706, 6184" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='rcnt' tag='DIV' /&gt;" Guid="17df49ca-cb57-42e2-892c-bb33df6dcf6a" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='main' title='&amp;quot;千代田区障害者虐待防止センター(千代田区障害者よろず相談Light)&amp;quot; 公式サイト - Google 検索' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="5a3e6e9884aed877f08ccf75b696a59c.jpg" xmlns="">0OhPKFo6JVk-CqRN834SCmw</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">GetText</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>
