@@ -6,3 +6,13 @@
 .screenshots/
 .settings/
 .storage/
+
+# ダウンロード資料と過去の出力
+/Data/
+/test/
+/虐待防止・苦情問い合わせ連絡先_*.xlsx
+
+# 一時ファイルと自動保存
+~$*
+~*.xaml
+/Main (自動保存)
