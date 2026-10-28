@@ -94,7 +94,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MainALL" sap:VirtualizedContainerService.HintSize="452,997.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MainALL" sap:VirtualizedContainerService.HintSize="634,997.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="BasePath" />
     </Sequence.Variables>

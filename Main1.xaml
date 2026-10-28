@@ -216,7 +216,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="842,23456.5" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="862,23156.5" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="downloadStartTime" />
       <Variable x:TypeArguments="x:String" Name="保存パス" />
@@ -248,20 +248,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="虐待防止センターリスト取得" sap:VirtualizedContainerService.HintSize="842,23433.5" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="虐待防止センターリスト取得" sap:VirtualizedContainerService.HintSize="862,23133.5" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="資料をダウンロード" sap:VirtualizedContainerService.HintSize="808,4620" sap2010:WorkflowViewState.IdRef="Sequence_124">
+      <Sequence DisplayName="資料をダウンロード" sap:VirtualizedContainerService.HintSize="828,4620" sap2010:WorkflowViewState.IdRef="Sequence_124">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Assign DisplayName="保存ファイルパスを設定" sap:VirtualizedContainerService.HintSize="558,176" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign DisplayName="保存ファイルパスを設定" sap:VirtualizedContainerService.HintSize="616,176" sap2010:WorkflowViewState.IdRef="Assign_1">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[保存パス]</OutArgument>
           </Assign.To>
@@ -269,7 +269,7 @@
             <InArgument x:TypeArguments="x:String">[Path.Combine(BasePath, "Data")]</InArgument>
           </Assign.Value>
         </Assign>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="資料のサイトを開く" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="558,4352" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7fbd7fc2-1d92-4c6b-b606-2be57fc76682" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="資料のサイトを開く" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="616,4352" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7fbd7fc2-1d92-4c6b-b606-2be57fc76682" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
@@ -515,14 +515,14 @@
           </uix:NApplicationCard.TargetApp>
         </uix:NApplicationCard>
       </Sequence>
-      <Sequence DisplayName="出力するファイルを準備する" sap:VirtualizedContainerService.HintSize="808,1698" sap2010:WorkflowViewState.IdRef="Sequence_125">
+      <Sequence DisplayName="出力するファイルを準備する" sap:VirtualizedContainerService.HintSize="828,1365.5" sap2010:WorkflowViewState.IdRef="Sequence_125">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="ファイルが保存されているかリトライして確認" sap:VirtualizedContainerService.HintSize="452,463.5" sap2010:WorkflowViewState.IdRef="RetryScope_2">
+        <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="ファイルが保存されているかリトライして確認" sap:VirtualizedContainerService.HintSize="616,131" sap2010:WorkflowViewState.IdRef="RetryScope_2">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
               <Sequence DisplayName="アクション" sap:VirtualizedContainerService.HintSize="450,174.5" sap2010:WorkflowViewState.IdRef="Sequence_45">
@@ -541,7 +541,7 @@
             </ActivityFunc>
           </ui:RetryScope.Condition>
         </ui:RetryScope>
-        <Assign DisplayName="ダウンロード先のファイルパス取得" sap:VirtualizedContainerService.HintSize="452,176" sap2010:WorkflowViewState.IdRef="Assign_45">
+        <Assign DisplayName="ダウンロード先のファイルパス取得" sap:VirtualizedContainerService.HintSize="616,176" sap2010:WorkflowViewState.IdRef="Assign_45">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[保存パス]</OutArgument>
           </Assign.To>
@@ -554,9 +554,9 @@
 ).First()]</InArgument>
           </Assign.Value>
         </Assign>
-        <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Path.Combine(BasePath, &quot;虐待防止・苦情問い合わせ連絡先_&quot; &amp; Now.ToString(&quot;yyyyMMdd&quot;) &amp; &quot;.xlsx&quot;)]" DisplayName="出力ファイルを今日の日付で作成" sap:VirtualizedContainerService.HintSize="452,224.5" sap2010:WorkflowViewState.IdRef="CopyFile_3" Path="[Path.Combine(BasePath, &quot;虐待防止・苦情問い合わせ連絡先テンプレート.xlsx&quot;)]" />
-        <Delay DisplayName="待機" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="452,123.5" sap2010:WorkflowViewState.IdRef="Delay_19" />
-        <ueab:ExcelApplicationCard DisplayName="出力ファイルを開く" sap:VirtualizedContainerService.HintSize="452,618.5" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_6" ResizeWindow="None" WorkbookPath="[保存パス]">
+        <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Path.Combine(BasePath, &quot;虐待防止・苦情問い合わせ連絡先_&quot; &amp; Now.ToString(&quot;yyyyMMdd&quot;) &amp; &quot;.xlsx&quot;)]" DisplayName="出力ファイルを今日の日付で作成" sap:VirtualizedContainerService.HintSize="616,224.5" sap2010:WorkflowViewState.IdRef="CopyFile_3" Path="[Path.Combine(BasePath, &quot;虐待防止・苦情問い合わせ連絡先テンプレート.xlsx&quot;)]" />
+        <Delay DisplayName="待機" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="616,123.5" sap2010:WorkflowViewState.IdRef="Delay_19" />
+        <ueab:ExcelApplicationCard DisplayName="出力ファイルを開く" sap:VirtualizedContainerService.HintSize="616,618.5" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_6" ResizeWindow="None" WorkbookPath="[保存パス]">
           <ueab:ExcelApplicationCard.Body>
             <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
               <ActivityAction.Argument>
@@ -575,27 +575,27 @@
           </ueab:ExcelApplicationCard.Body>
         </ueab:ExcelApplicationCard>
       </Sequence>
-      <Sequence DisplayName="出力ファイルにデータ書き込みし、公式URLを書き込みする" sap:VirtualizedContainerService.HintSize="808,17032.5" sap2010:WorkflowViewState.IdRef="Sequence_44">
+      <Sequence DisplayName="出力ファイルにデータ書き込みし、公式URLを書き込みする" sap:VirtualizedContainerService.HintSize="828,17065" sap2010:WorkflowViewState.IdRef="Sequence_44">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ueab:ExcelApplicationCard DisplayName="出力ファイルを開く" sap:VirtualizedContainerService.HintSize="774,16949.5" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_9" ResizeWindow="None" WorkbookPath="[Path.Combine(&#xA;    BasePath,&#xA;    &quot;虐待防止・苦情問い合わせ連絡先_&quot; &amp;&#xA;    Now.ToString(&quot;yyyyMMdd&quot;) &amp;&#xA;    &quot;.xlsx&quot;&#xA;)]">
+        <ueab:ExcelApplicationCard DisplayName="出力ファイルを開く" sap:VirtualizedContainerService.HintSize="794,16982" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_9" ResizeWindow="None" WorkbookPath="[Path.Combine(&#xA;    BasePath,&#xA;    &quot;虐待防止・苦情問い合わせ連絡先_&quot; &amp;&#xA;    Now.ToString(&quot;yyyyMMdd&quot;) &amp;&#xA;    &quot;.xlsx&quot;&#xA;)]">
           <ueab:ExcelApplicationCard.Body>
             <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="772,16728" sap2010:WorkflowViewState.IdRef="Sequence_68">
+              <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="792,16760.5" sap2010:WorkflowViewState.IdRef="Sequence_68">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;虐待防止&quot;).Range(&quot;A2&quot;)]" DisplayName="全データ書き込み" sap:VirtualizedContainerService.HintSize="738,223.5" sap2010:WorkflowViewState.IdRef="WriteRangeX_4" IgnoreEmptySource="False" Source="[DataTable]" />
-                <ueab:ExcelForEachRowX DisplayName="機関名を繰り返し (Excel の各行)" EmptyRowBehavior="Stop" HasHeaders="False" sap:VirtualizedContainerService.HintSize="738,14736" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_5" Range="[Excel.Sheet(&quot;虐待防止&quot;).Range(&quot;A2:F1000&quot;)]" SaveAfterEachRow="False">
+                <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;虐待防止&quot;).Range(&quot;A2&quot;)]" DisplayName="全データ書き込み" sap:VirtualizedContainerService.HintSize="758,223.5" sap2010:WorkflowViewState.IdRef="WriteRangeX_4" IgnoreEmptySource="False" Source="[DataTable]" />
+                <ueab:ExcelForEachRowX DisplayName="機関名を繰り返し (Excel の各行)" EmptyRowBehavior="Stop" HasHeaders="False" sap:VirtualizedContainerService.HintSize="758,14768.5" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_5" Range="[Excel.Sheet(&quot;虐待防止&quot;).Range(&quot;A2:F1000&quot;)]" SaveAfterEachRow="False">
                   <ueab:ExcelForEachRowX.Body>
                     <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
                       <ActivityAction.Argument1>
@@ -604,7 +604,7 @@
                       <ActivityAction.Argument2>
                         <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                       </ActivityAction.Argument2>
-                      <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="736,14553" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                      <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="756,14585.5" sap2010:WorkflowViewState.IdRef="Sequence_69">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Int32" Default="0" Name="CurrentIndex" />
                         </Sequence.Variables>
@@ -613,15 +613,15 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <TryCatch DisplayName="トライ キャッチ（エラー時にリトライを入力）" sap:VirtualizedContainerService.HintSize="702,14278.5" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                        <TryCatch DisplayName="トライ キャッチ（エラー時にリトライを入力）" sap:VirtualizedContainerService.HintSize="722,14311" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                           <TryCatch.Try>
-                            <Sequence DisplayName="例外が発生しうる処理 (try)" sap:VirtualizedContainerService.HintSize="700,13644" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                            <Sequence DisplayName="例外が発生しうる処理 (try)" sap:VirtualizedContainerService.HintSize="720,13676.5" sap2010:WorkflowViewState.IdRef="Sequence_112">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="666,176" sap2010:WorkflowViewState.IdRef="Assign_106">
+                              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="Assign_106">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[SearchWord]</OutArgument>
                                 </Assign.To>
@@ -629,12 +629,12 @@
                                   <InArgument x:TypeArguments="x:String">[""]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <ueab:ReadCellValueX Cell="[CurrentRow.ByIndex(0)]" DisplayName="機関名の値を読み込み" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="666,171" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByIndex(0)]" DisplayName="機関名の値を読み込み" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
                                 <ueab:ReadCellValueX.SaveTo>
                                   <OutArgument x:TypeArguments="x:String">[SearchWord]</OutArgument>
                                 </ueab:ReadCellValueX.SaveTo>
                               </ueab:ReadCellValueX>
-                              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="666,176" sap2010:WorkflowViewState.IdRef="Assign_140">
+                              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="Assign_140">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[SearchWord]</OutArgument>
                                 </Assign.To>
@@ -650,18 +650,18 @@
 )]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <ueab:ReadCellValueX Cell="[CurrentRow.ByIndex(1)]" DisplayName="電話番号を読み込み" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="666,171" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByIndex(1)]" DisplayName="電話番号を読み込み" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
                                 <ueab:ReadCellValueX.SaveTo>
                                   <OutArgument x:TypeArguments="x:String">[phonenumber]</OutArgument>
                                 </ueab:ReadCellValueX.SaveTo>
                               </ueab:ReadCellValueX>
-                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Googleの検索画面を開く" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="666,12890" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="DebuggerApi" ScopeGuid="c07af1d3-36fc-4f80-aff2-9194c43b954d" Version="V2">
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Googleの検索画面を開く" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="686,12922.5" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="DebuggerApi" ScopeGuid="c07af1d3-36fc-4f80-aff2-9194c43b954d" Version="V2">
                                 <uix:NApplicationCard.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="664,12695" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                    <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="684,12727.5" sap2010:WorkflowViewState.IdRef="Sequence_70">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="apikey" />
                                       </Sequence.Variables>
@@ -670,16 +670,16 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NWindowOperation DisplayName="ウィンドウ操作 - ウィンドウをフォアグラウンドに移動" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="630,227" sap2010:WorkflowViewState.IdRef="NWindowOperation_36" Operation="ToForeground" ScopeIdentifier="c07af1d3-36fc-4f80-aff2-9194c43b954d" Version="V5" />
-                                      <uix:NWindowOperation DisplayName="ウィンドウ操作 - ウィンドウを最大化" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="630,227" sap2010:WorkflowViewState.IdRef="NWindowOperation_37" Operation="Maximize" ScopeIdentifier="c07af1d3-36fc-4f80-aff2-9194c43b954d" Version="V5" />
-                                      <Sequence DisplayName="公式ページを検索" sap:VirtualizedContainerService.HintSize="630,382" sap2010:WorkflowViewState.IdRef="Sequence_129">
+                                      <uix:NWindowOperation DisplayName="ウィンドウ操作 - ウィンドウをフォアグラウンドに移動" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="650,227" sap2010:WorkflowViewState.IdRef="NWindowOperation_36" Operation="ToForeground" ScopeIdentifier="c07af1d3-36fc-4f80-aff2-9194c43b954d" Version="V5" />
+                                      <uix:NWindowOperation DisplayName="ウィンドウ操作 - ウィンドウを最大化" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="650,227" sap2010:WorkflowViewState.IdRef="NWindowOperation_37" Operation="Maximize" ScopeIdentifier="c07af1d3-36fc-4f80-aff2-9194c43b954d" Version="V5" />
+                                      <Sequence DisplayName="公式ページを検索" sap:VirtualizedContainerService.HintSize="650,382" sap2010:WorkflowViewState.IdRef="Sequence_129">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NGoToUrl DisplayName="URL に移動 - " sap:VirtualizedContainerService.HintSize="416,175.5" sap2010:WorkflowViewState.IdRef="NGoToUrl_11" ScopeIdentifier="c07af1d3-36fc-4f80-aff2-9194c43b954d" Url="[&quot;https://www.google.com/search?q=&quot; &amp;&#xA;System.Uri.EscapeDataString(SearchWord &amp; &quot; &quot; &amp; phonenumber &amp; &quot; 公式サイト&quot;)]" Version="V5" />
+                                        <uix:NGoToUrl DisplayName="URL に移動 - " sap:VirtualizedContainerService.HintSize="616,175.5" sap2010:WorkflowViewState.IdRef="NGoToUrl_11" ScopeIdentifier="c07af1d3-36fc-4f80-aff2-9194c43b954d" Url="[&quot;https://www.google.com/search?q=&quot; &amp;&#xA;System.Uri.EscapeDataString(SearchWord &amp; &quot; &quot; &amp; phonenumber &amp; &quot; 公式サイト&quot;)]" Version="V5" />
                                         <Delay DisplayName="待機" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="416,114.5" sap2010:WorkflowViewState.IdRef="Delay_17" />
                                       </Sequence>
                                       <Sequence DisplayName="検索一覧から候補URLリストを取得する" sap:VirtualizedContainerService.HintSize="630,1479.5" sap2010:WorkflowViewState.IdRef="Sequence_126">
@@ -766,7 +766,7 @@
                                           </TryCatch.Finally>
                                         </TryCatch>
                                       </Sequence>
-                                      <Assign DisplayName="combinedTextを空にする" sap:VirtualizedContainerService.HintSize="630,176" sap2010:WorkflowViewState.IdRef="Assign_90">
+                                      <Assign DisplayName="combinedTextを空にする" sap:VirtualizedContainerService.HintSize="650,176" sap2010:WorkflowViewState.IdRef="Assign_90">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[combinedText]</OutArgument>
                                         </Assign.To>
@@ -774,7 +774,7 @@
                                           <InArgument x:TypeArguments="x:String">[""]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign DisplayName="URLリストを作成する" sap:VirtualizedContainerService.HintSize="630,176" sap2010:WorkflowViewState.IdRef="Assign_91">
+                                      <Assign DisplayName="URLリストを作成する" sap:VirtualizedContainerService.HintSize="650,176" sap2010:WorkflowViewState.IdRef="Assign_91">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="scg:List(x:String)">[urlList]</OutArgument>
                                         </Assign.To>
@@ -789,34 +789,34 @@
 )]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Sequence DisplayName="ページ本文を取得" sap:VirtualizedContainerService.HintSize="630,3786.5" sap2010:WorkflowViewState.IdRef="Sequence_127">
+                                      <Sequence DisplayName="ページ本文を取得" sap:VirtualizedContainerService.HintSize="650,3819" sap2010:WorkflowViewState.IdRef="Sequence_127">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素) CurrentUrl" sap:VirtualizedContainerService.HintSize="596,3694.5" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[urlList]">
+                                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素) CurrentUrl" sap:VirtualizedContainerService.HintSize="616,3727" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[urlList]">
                                           <ui:ForEach.Body>
                                             <ActivityAction x:TypeArguments="x:String">
                                               <ActivityAction.Argument>
                                                 <DelegateInArgument x:TypeArguments="x:String" Name="CurrentUrl" />
                                               </ActivityAction.Argument>
-                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="594,3572" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="594,3604.5" sap2010:WorkflowViewState.IdRef="Sequence_81">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <TryCatch DisplayName="トライ キャッチ" sap:VirtualizedContainerService.HintSize="560,3169" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                                <TryCatch DisplayName="トライ キャッチ" sap:VirtualizedContainerService.HintSize="560,3201.5" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                                   <TryCatch.Try>
-                                                    <Sequence DisplayName="例外が発生しうる処理 (try)" sap:VirtualizedContainerService.HintSize="558,2710.5" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                                                    <Sequence DisplayName="例外が発生しうる処理 (try)" sap:VirtualizedContainerService.HintSize="558,2743" sap2010:WorkflowViewState.IdRef="Sequence_89">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <If Condition="[String.IsNullOrWhiteSpace(CurrentUrl) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;/lib/download.php&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.pdf&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.xlsx&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.xls&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.csv&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.zip&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.docx&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.pptx&quot;)]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="524,2650.5" sap2010:WorkflowViewState.IdRef="If_29">
+                                                      <If Condition="[String.IsNullOrWhiteSpace(CurrentUrl) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;/lib/download.php&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.pdf&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.xlsx&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.xls&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.csv&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.zip&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.docx&quot;) OrElse CurrentUrl.ToLowerInvariant().Contains(&quot;.pptx&quot;)]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="524,2683" sap2010:WorkflowViewState.IdRef="If_29">
                                                         <If.Then>
                                                           <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,227" sap2010:WorkflowViewState.IdRef="Sequence_132">
                                                             <sap:WorkflowViewStateService.ViewState>
@@ -849,7 +849,7 @@
                                                                 <InArgument x:TypeArguments="x:Boolean">[False]</InArgument>
                                                               </Assign.Value>
                                                             </Assign>
-                                                            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="488,176" sap2010:WorkflowViewState.IdRef="Assign_131">
+                                                            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="Assign_131">
                                                               <Assign.To>
                                                                 <OutArgument x:TypeArguments="x:String">[pageText]</OutArgument>
                                                               </Assign.To>
@@ -883,7 +883,7 @@
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                         <uix:NGoToUrl DisplayName="URL に移動 - " sap:VirtualizedContainerService.HintSize="416,175.5" sap2010:WorkflowViewState.IdRef="NGoToUrl_10" ScopeIdentifier="c07af1d3-36fc-4f80-aff2-9194c43b954d" Url="[CurrentUrl]" Version="V5" />
                                                                         <Delay DisplayName="待機" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,123.5" sap2010:WorkflowViewState.IdRef="Delay_33" />
-                                                                        <uix:NInjectJsScript InputParameter="{x:Null}" DisplayName="ページ本文を取得" sap:VirtualizedContainerService.HintSize="416,247.5" sap2010:WorkflowViewState.IdRef="NInjectJsScript_18" ScopeIdentifier="c07af1d3-36fc-4f80-aff2-9194c43b954d" ScriptCode="function (element, input) { const text = document.body ? document.body.innerText : ''; return text.replace(/\n{3,}/g, '\n\n').trim().substring(0, 12000); }" Version="V5">
+                                                                        <uix:NInjectJsScript InputParameter="{x:Null}" ContinueOnError="True" DisplayName="ページ本文を取得" sap:VirtualizedContainerService.HintSize="416,247.5" sap2010:WorkflowViewState.IdRef="NInjectJsScript_18" ScopeIdentifier="c07af1d3-36fc-4f80-aff2-9194c43b954d" ScriptCode="function (element, input) { const text = document.body ? document.body.innerText : ''; return text.replace(/\n{3,}/g, '\n\n').trim().substring(0, 12000); }" Version="V5">
                                                                           <uix:NInjectJsScript.ScriptOutput>
                                                                             <OutArgument x:TypeArguments="x:String">[pageText]</OutArgument>
                                                                           </uix:NInjectJsScript.ScriptOutput>
@@ -926,7 +926,7 @@
                                                                       </Sequence>
                                                                     </TryCatch.Finally>
                                                                   </TryCatch>
-                                                                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="452,167" sap2010:WorkflowViewState.IdRef="Assign_141">
+                                                                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="Assign_141">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="x:Int32">[pageTextRetryCount]</OutArgument>
                                                                     </Assign.To>
@@ -976,7 +976,7 @@
                                                     </Sequence>
                                                   </TryCatch.Finally>
                                                 </TryCatch>
-                                                <Assign DisplayName="先頭から最大6000文字だけ取得" sap:VirtualizedContainerService.HintSize="560,176" sap2010:WorkflowViewState.IdRef="Assign_93">
+                                                <Assign DisplayName="先頭から最大6000文字だけ取得" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="Assign_93">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:String">[limitedText]</OutArgument>
                                                   </Assign.To>
@@ -984,7 +984,7 @@
                                                     <InArgument x:TypeArguments="x:String">[If(String.IsNullOrWhiteSpace(pageText), "", pageText.Substring(0, Math.Min(pageText.Length, 6000)))]</InArgument>
                                                   </Assign.Value>
                                                 </Assign>
-                                                <Assign DisplayName="取得した文字列をまとめる" sap:VirtualizedContainerService.HintSize="560,167" sap2010:WorkflowViewState.IdRef="Assign_94">
+                                                <Assign DisplayName="取得した文字列をまとめる" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="Assign_94">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:String">[combinedText]</OutArgument>
                                                   </Assign.To>
@@ -997,7 +997,7 @@
                                           </ui:ForEach.Body>
                                         </ui:ForEach>
                                       </Sequence>
-                                      <Assign DisplayName="URLを空にする" sap:VirtualizedContainerService.HintSize="630,176" sap2010:WorkflowViewState.IdRef="Assign_92">
+                                      <Assign DisplayName="URLを空にする" sap:VirtualizedContainerService.HintSize="650,176" sap2010:WorkflowViewState.IdRef="Assign_92">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[URL]</OutArgument>
                                         </Assign.To>
@@ -1005,7 +1005,7 @@
                                           <InArgument x:TypeArguments="x:String">[""]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign DisplayName="使用モデルを設定する" sap:VirtualizedContainerService.HintSize="630,176" sap2010:WorkflowViewState.IdRef="Assign_95">
+                                      <Assign DisplayName="使用モデルを設定する" sap:VirtualizedContainerService.HintSize="650,176" sap2010:WorkflowViewState.IdRef="Assign_95">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[使用モデル]</OutArgument>
                                         </Assign.To>
@@ -1013,7 +1013,7 @@
                                           <InArgument x:TypeArguments="x:String">["gemini-flash-lite-latest"]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign DisplayName="回答文字を空にする" sap:VirtualizedContainerService.HintSize="630,176" sap2010:WorkflowViewState.IdRef="Assign_96">
+                                      <Assign DisplayName="回答文字を空にする" sap:VirtualizedContainerService.HintSize="650,176" sap2010:WorkflowViewState.IdRef="Assign_96">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[回答文字]</OutArgument>
                                         </Assign.To>
@@ -1021,7 +1021,7 @@
                                           <InArgument x:TypeArguments="x:String">[""]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign DisplayName="Geminiのプロンプトを設定" sap:VirtualizedContainerService.HintSize="630,176" sap2010:WorkflowViewState.IdRef="Assign_97">
+                                      <Assign DisplayName="Geminiのプロンプトを設定" sap:VirtualizedContainerService.HintSize="650,176" sap2010:WorkflowViewState.IdRef="Assign_97">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[promptText]</OutArgument>
                                         </Assign.To>
@@ -1068,7 +1068,7 @@ https://～
 NG"]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign DisplayName="apiRetryCountをゼロにする" sap:VirtualizedContainerService.HintSize="630,176" sap2010:WorkflowViewState.IdRef="Assign_111">
+                                      <Assign DisplayName="apiRetryCountをゼロにする" sap:VirtualizedContainerService.HintSize="650,176" sap2010:WorkflowViewState.IdRef="Assign_111">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:Int32">[apiRetryCount]</OutArgument>
                                         </Assign.To>
@@ -1452,7 +1452,7 @@ NG"]</InArgument>
                             </Sequence>
                           </TryCatch.Finally>
                         </TryCatch>
-                        <ueab:WriteCellX Cell="[CurrentRow.ByIndex(5)]" DisplayName="セルに書き込み" sap:VirtualizedContainerService.HintSize="702,214.5" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[URL]" />
+                        <ueab:WriteCellX Cell="[CurrentRow.ByIndex(5)]" DisplayName="セルに書き込み" sap:VirtualizedContainerService.HintSize="416,214.5" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[URL]" />
                       </Sequence>
                     </ActivityAction>
                   </ueab:ExcelForEachRowX.Body>
